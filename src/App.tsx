@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
 import NotFound from "./pages/NotFound";
+import ComingSoon from "./pages/ComingSoon";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -57,6 +58,12 @@ const App = () => (
             <Route path="/" element={<SafeIndex />} />
             <Route path="/full" element={<Index />} />
             <Route path="/handovers" element={<Handovers />} />
+            <Route path="/templates" element={<ComingSoon />} />
+            <Route path="/calendar" element={<ComingSoon />} />
+            <Route path="/analytics" element={<ComingSoon />} />
+            <Route path="/organization" element={<ComingSoon />} />
+            <Route path="/settings" element={<ComingSoon />} />
+            <Route path="/help" element={<ComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

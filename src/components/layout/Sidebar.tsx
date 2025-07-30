@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { 
   LayoutDashboard, 
   Users, 
@@ -21,13 +22,13 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const location = useLocation();
 
   const navigationItems = [
     {
       title: "Dashboard",
       icon: LayoutDashboard,
       href: "/",
-      isActive: true,
     },
     {
       title: "Handovers",
@@ -102,43 +103,52 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
       {/* Main Navigation */}
       <nav className="flex-1 space-y-2 px-3">
-        {navigationItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className={cn(
-              "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-              "nav-item",
-              item.isActive && "nav-item-active"
-            )}
-          >
-            <item.icon className="h-5 w-5 shrink-0" />
-            {!isCollapsed && (
-              <>
-                <span className="ml-3">{item.title}</span>
-                {item.badge && (
-                  <span className="ml-auto rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
-                    {item.badge}
-                  </span>
-                )}
-              </>
-            )}
-          </a>
-        ))}
+        {navigationItems.map((item) => {
+          const isActive = location.pathname === item.href;
+          return (
+            <Link
+              key={item.href}
+              to={item.href}
+              className={cn(
+                "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                "nav-item",
+                isActive && "nav-item-active"
+              )}
+            >
+              <item.icon className="h-5 w-5 shrink-0" />
+              {!isCollapsed && (
+                <>
+                  <span className="ml-3">{item.title}</span>
+                  {item.badge && (
+                    <span className="ml-auto rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
+                      {item.badge}
+                    </span>
+                  )}
+                </>
+              )}
+            </Link>
+          );
+        })}
       </nav>
 
       {/* Bottom Navigation */}
       <div className="space-y-2 p-3">
-        {bottomItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="flex items-center rounded-lg px-3 py-2 text-sm font-medium nav-item"
-          >
-            <item.icon className="h-5 w-5 shrink-0" />
-            {!isCollapsed && <span className="ml-3">{item.title}</span>}
-          </a>
-        ))}
+        {bottomItems.map((item) => {
+          const isActive = location.pathname === item.href;
+          return (
+            <Link
+              key={item.href}
+              to={item.href}
+              className={cn(
+                "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors nav-item",
+                isActive && "nav-item-active"
+              )}
+            >
+              <item.icon className="h-5 w-5 shrink-0" />
+              {!isCollapsed && <span className="ml-3">{item.title}</span>}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
