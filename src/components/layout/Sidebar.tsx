@@ -14,7 +14,10 @@ import {
   Building
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { JobWizard } from "@/components/job-wizard/JobWizard";
 import { cn } from "@/lib/utils";
+import type { GeneratedTemplate, JobRequest } from "@/types/template.types";
 
 interface SidebarProps {
   className?: string;
@@ -22,6 +25,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [showJobWizard, setShowJobWizard] = useState(false);
   const location = useLocation();
 
   const navigationItems = [
@@ -71,6 +75,21 @@ export const Sidebar = ({ className }: SidebarProps) => {
     },
   ];
 
+  const handleNewHandover = () => {
+    setShowJobWizard(true);
+  };
+
+  const handleJobWizardComplete = (template: GeneratedTemplate, jobRequest: JobRequest) => {
+    console.log("Job wizard completed:", { template, jobRequest });
+    setShowJobWizard(false);
+    // Here you would typically save the template and create a handover
+    // For now, we'll just close the wizard
+  };
+
+  const handleJobWizardCancel = () => {
+    setShowJobWizard(false);
+  };
+
   return (
     <div
       className={cn(
@@ -95,7 +114,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
       {/* Navigation Header */}
       <div className="p-6">
-        <Button className="w-full btn-enterprise">
+        <Button 
+          className="w-full btn-enterprise"
+          onClick={handleNewHandover}
+        >
           <Plus className="mr-2 h-4 w-4" />
           {!isCollapsed && "New Handover"}
         </Button>
@@ -154,6 +176,19 @@ export const Sidebar = ({ className }: SidebarProps) => {
           );
         })}
       </div>
+
+      {/* Job Wizard Dialog */}
+      <Dialog open={showJobWizard} onOpenChange={setShowJobWizard}>
+        <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Create New Handover</DialogTitle>
+          </DialogHeader>
+          <JobWizard
+            onComplete={handleJobWizardComplete}
+            onCancel={handleJobWizardCancel}
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

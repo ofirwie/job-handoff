@@ -7,6 +7,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import Index from "./pages/Index";
 import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
+import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
 import DebugRouting from "./pages/DebugRouting";
@@ -67,7 +68,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/safe" element={<SafeIndex />} />
               <Route path="/handovers" element={<Handovers />} />
-              <Route path="/templates" element={<ComingSoon />} />
+              <Route path="/templates" element={<Templates />} />
               <Route path="/calendar" element={<ComingSoon />} />
               <Route path="/analytics" element={<ComingSoon />} />
               <Route path="/organization" element={<ComingSoon />} />
