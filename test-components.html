@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Test</title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="test-container">
+        <h1>Testing Supabase Connection</h1>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        console.log('Testing Supabase connection...');
+        
+        const supabaseUrl = 'https://pjiqcpusjxfjuulojzhc.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MjMyNDIsImV4cCI6MjA2OTM5OTI0Mn0.ruZKcHHKCVmpERhanLNPtGE7RMgex6IjtXZ1MHTcMAs';
+        
+        const { createClient } = supabase;
+        const client = createClient(supabaseUrl, supabaseKey);
+        
+        async function testConnection() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing connection...</p>';
+            
+            try {
+                // Test basic connection
+                const { data: orgData, error: orgError } = await client.from('organizations').select('*');
+                if (orgError) throw orgError;
+                
+                results.innerHTML += `<p>✅ Organizations: ${orgData.length} found</p>`;
+                
+                // Test handovers with fallback
+                try {
+                    const { data: handoverData, error: handoverError } = await client
+                        .from('handovers')
+                        .select('*')
+                        .limit(1);
+                    
+                    if (handoverError) {
+                        results.innerHTML += `<p>⚠️ Handovers complex query failed: ${handoverError.message}</p>`;
+                        
+                        // Try simple query
+                        const { data: simpleHandovers, error: simpleError } = await client
+                            .from('handovers')
+                            .select('id, leaving_employee_name, status')
+                            .limit(1);
+                            
+                        if (simpleError) {
+                            results.innerHTML += `<p>❌ Handovers simple query failed: ${simpleError.message}</p>`;
+                        } else {
+                            results.innerHTML += `<p>✅ Handovers simple query: ${simpleHandovers.length} found</p>`;
+                        }
+                    } else {
+                        results.innerHTML += `<p>✅ Handovers: ${handoverData.length} found</p>`;
+                    }
+                } catch (handoverErr) {
+                    results.innerHTML += `<p>❌ Handovers error: ${handoverErr.message}</p>`;
+                }
+                
+                results.innerHTML += '<p><strong>🎉 Connection working! App should load properly.</strong></p>';
+                
+            } catch (error) {
+                results.innerHTML += `<p>❌ Connection failed: ${error.message}</p>`;
+                results.innerHTML += '<p><strong>🚨 This would cause empty shell deployment</strong></p>';
+            }
+        }
+        
+        testConnection();
+    </script>
+</body>
+</html>

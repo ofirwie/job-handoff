@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import Index from "./pages/Index";
+import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
 import NotFound from "./pages/NotFound";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -53,7 +54,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<SafeIndex />} />
+            <Route path="/full" element={<Index />} />
             <Route path="/handovers" element={<Handovers />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
