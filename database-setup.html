@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Handoff Project - Database Setup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .status.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .status.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .status.warning { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        .status.info { background-color: #d7ecff; color: #0c5460; border: 1px solid #b8daff; }
+        
+        .sql-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .btn:hover { background-color: #2980b9; }
+        .btn.success { background-color: #27ae60; }
+        .btn.success:hover { background-color: #229954; }
+        .btn.danger { background-color: #e74c3c; }
+        .btn.danger:hover { background-color: #c0392b; }
+        
+        .step {
+            margin: 25px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fdfdfd;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .dashboard-link {
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .dashboard-link:hover {
+            background-color: #27ae60;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .copy-btn {
+            background-color: #95a5a6;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .copy-btn:hover { background-color: #7f8c8d; }
+        
+        .progress {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            height: 20px;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            background-color: #3498db;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Job Handoff Project - Database Setup</h1>
+        
+        <div id="status" class="status info">
+            <strong>Ready to setup database...</strong><br>
+            Supabase URL: https://pjiqcpusjxfjuulojzhc.supabase.co
+        </div>
+
+        <div class="progress">
+            <div id="progress-bar" class="progress-bar" style="width: 0%">0/4 Steps Complete</div>
+        </div>
+
+        <h2>🔧 Setup Instructions</h2>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Test Connection</strong>
+            <p>First, let's test if we can connect to your Supabase database:</p>
+            <button class="btn" onclick="testConnection()">Test Connection</button>
+            <div id="connection-result"></div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Open Supabase Dashboard</strong>
+            <p>Click the button below to open your Supabase SQL Editor:</p>
+            <a href="https://supabase.com/dashboard/project/pjiqcpusjxfjuulojzhc/sql" target="_blank" class="dashboard-link">
+                🌐 Open Supabase SQL Editor
+            </a>
+            <button class="btn" onclick="markStepComplete(2)">Mark as Complete</button>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Execute SQL Files</strong>
+            <p>Execute these SQL files in the exact order shown below. Click each button to copy the SQL, then paste and execute in Supabase:</p>
+            
+            <div id="sql-files">
+                <h3>📄 1. Schema Creation (01_flexible_schema.sql)</h3>
+                <button class="btn" onclick="copySqlToClipboard('schema')">Copy Schema SQL</button>
+                <button class="btn success" onclick="markSqlComplete('schema')">Mark Complete</button>
+                <div class="sql-block" id="schema-sql">Loading...</div>
+
+                <h3>📄 2. Security Policies (02_rls_policies.sql)</h3>
+                <button class="btn" onclick="copySqlToClipboard('policies')">Copy Policies SQL</button>
+                <button class="btn success" onclick="markSqlComplete('policies')">Mark Complete</button>
+                <div class="sql-block" id="policies-sql">Loading...</div>
+
+                <h3>📄 3. Initial Data (03_initial_data.sql)</h3>
+                <button class="btn" onclick="copySqlToClipboard('data')">Copy Data SQL</button>
+                <button class="btn success" onclick="markSqlComplete('data')">Mark Complete</button>
+                <div class="sql-block" id="data-sql">Loading...</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>Verify Setup</strong>
+            <p>Test that the database tables were created successfully:</p>
+            <button class="btn" onclick="verifySetup()">Verify Database Setup</button>
+            <div id="verify-result"></div>
+        </div>
+
+        <h2>📋 Troubleshooting</h2>
+        <div class="step">
+            <p><strong>If you encounter errors:</strong></p>
+            <ul>
+                <li>Make sure to execute the SQL files in the exact order (1, 2, 3)</li>
+                <li>If a statement fails, check the error message and try executing smaller chunks</li>
+                <li>Some CREATE EXTENSION commands may fail if extensions are already installed - this is normal</li>
+                <li>Row Level Security policies may fail if tables don't exist yet</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://pjiqcpusjxfjuulojzhc.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUyNzMzNzIsImV4cCI6MjA1MDg0OTM3Mn0.vEG15zFRNcUwfzDHGcgLIlx4Qs9DWrCPjxkFCJIbmhw';
+        
+        let completedSteps = 0;
+        const totalSteps = 4;
+        
+        // SQL file contents (will be loaded)
+        const sqlFiles = {
+            schema: \`-- Schema SQL will be loaded here\`,
+            policies: \`-- Policies SQL will be loaded here\`,
+            data: \`-- Data SQL will be loaded here\`
+        };
+
+        async function testConnection() {
+            const resultDiv = document.getElementById('connection-result');
+            resultDiv.innerHTML = '<div class="status info">Testing connection...</div>';
+            
+            try {
+                const response = await fetch(\`\${SUPABASE_URL}/rest/v1/\`, {
+                    method: 'GET',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': \`Bearer \${SUPABASE_ANON_KEY}\`
+                    }
+                });
+
+                if (response.ok) {
+                    resultDiv.innerHTML = '<div class="status success">✅ Connection successful! Your Supabase credentials are working.</div>';
+                    markStepComplete(1);
+                } else {
+                    resultDiv.innerHTML = \`<div class="status error">❌ Connection failed: \${response.status} \${response.statusText}</div>\`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = \`<div class="status error">❌ Connection error: \${error.message}</div>\`;
+            }
+        }
+
+        function copySqlToClipboard(type) {
+            const sql = sqlFiles[type];
+            navigator.clipboard.writeText(sql).then(() => {
+                alert(\`✅ \${type.toUpperCase()} SQL copied to clipboard! Now paste it into Supabase SQL Editor.\`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('❌ Failed to copy to clipboard. Please select and copy the SQL manually.');
+            });
+        }
+
+        function markSqlComplete(type) {
+            const button = event.target;
+            button.textContent = '✅ Complete';
+            button.style.backgroundColor = '#27ae60';
+            button.disabled = true;
+        }
+
+        function markStepComplete(stepNumber) {
+            completedSteps = Math.max(completedSteps, stepNumber);
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            const percentage = (completedSteps / totalSteps) * 100;
+            progressBar.style.width = percentage + '%';
+            progressBar.textContent = \`\${completedSteps}/\${totalSteps} Steps Complete\`;
+            
+            if (completedSteps === totalSteps) {
+                document.getElementById('status').innerHTML = '<div class="status success"><strong>🎉 Database setup complete!</strong><br>Your job-handoff React app should now work properly.</div>';
+            }
+        }
+
+        async function verifySetup() {
+            const resultDiv = document.getElementById('verify-result');
+            resultDiv.innerHTML = '<div class="status info">Verifying database setup...</div>';
+            
+            // List of tables that should exist
+            const expectedTables = [
+                'organizations', 'plants', 'departments', 'jobs', 'user_profiles',
+                'categories', 'item_types', 'base_templates', 'templates', 
+                'template_items', 'handovers', 'handover_progress'
+            ];
+            
+            try {
+                // Try to query each table to see if it exists
+                let existingTables = [];
+                let errors = [];
+                
+                for (const table of expectedTables) {
+                    try {
+                        const response = await fetch(\`\${SUPABASE_URL}/rest/v1/\${table}?limit=0\`, {
+                            method: 'GET',
+                            headers: {
+                                'apikey': SUPABASE_ANON_KEY,
+                                'Authorization': \`Bearer \${SUPABASE_ANON_KEY}\`,
+                                'Range': '0-0'
+                            }
+                        });
+                        
+                        if (response.ok || response.status === 206) {
+                            existingTables.push(table);
+                        } else {
+                            errors.push(\`\${table}: \${response.status}\`);
+                        }
+                    } catch (error) {
+                        errors.push(\`\${table}: \${error.message}\`);
+                    }
+                }
+                
+                const resultHtml = \`
+                    <div class="status \${existingTables.length === expectedTables.length ? 'success' : 'warning'}">
+                        <strong>Verification Results:</strong><br>
+                        ✅ Found \${existingTables.length}/\${expectedTables.length} expected tables<br>
+                        \${existingTables.length > 0 ? '📋 Existing tables: ' + existingTables.join(', ') : ''}
+                        \${errors.length > 0 ? '<br>⚠️ Issues: ' + errors.join(', ') : ''}
+                    </div>
+                \`;
+                
+                resultDiv.innerHTML = resultHtml;
+                
+                if (existingTables.length === expectedTables.length) {
+                    markStepComplete(4);
+                }
+                
+            } catch (error) {
+                resultDiv.innerHTML = \`<div class="status error">❌ Verification failed: \${error.message}</div>\`;
+            }
+        }
+
+        // Load SQL file contents
+        window.addEventListener('load', () => {
+            // Since we can't load files directly in browser, we'll embed the SQL
+            sqlFiles.schema = \`-- Flexible Handover System Database Schema
+-- Based on truly_dynamic_system.md specification
+-- Supports dynamic categories, flexible item types, and learning capabilities
+
+-- Enable UUID extension
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- Organizations (Albaad corporate structure)
+CREATE TABLE organizations (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    code VARCHAR(10) UNIQUE NOT NULL,
+    settings JSONB DEFAULT '{}',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Plants (8 plants: USA, Poland, Germany, Spain, Israel)
+CREATE TABLE plants (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    organization_id UUID REFERENCES organizations(id) NOT NULL,
+    name VARCHAR(200) NOT NULL,
+    code VARCHAR(10) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    location VARCHAR(500),
+    manager_email VARCHAR(255),
+    local_regulations JSONB DEFAULT '{}', -- Country-specific rules
+    cultural_settings JSONB DEFAULT '{}', -- Language, customs, etc.
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Departments
+CREATE TABLE departments (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    plant_id UUID REFERENCES plants(id) NOT NULL,
+    name VARCHAR(200) NOT NULL,
+    code VARCHAR(10) NOT NULL,
+    manager_email VARCHAR(255),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Jobs/Roles
+CREATE TABLE jobs (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    department_id UUID REFERENCES departments(id) NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    level VARCHAR(50) CHECK (level IN ('junior', 'senior', 'manager', 'director')),
+    description TEXT,
+    custom_attributes JSONB DEFAULT '{}', -- Flexible job attributes
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT true
+);
+
+-- User profiles (extends Supabase auth.users)
+CREATE TABLE user_profiles (
+    id UUID REFERENCES auth.users(id) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    full_name VARCHAR(255),
+    role VARCHAR(50) NOT NULL CHECK (role IN ('hr', 'manager', 'employee', 'admin')),
+    plant_id UUID REFERENCES plants(id),
+    department_id UUID REFERENCES departments(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Dynamic Categories System
+CREATE TABLE categories (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    display_name VARCHAR(200) NOT NULL,
+    description TEXT,
+    is_system_default BOOLEAN DEFAULT false, -- Core categories (always present)
+    is_active BOOLEAN DEFAULT true,
+    created_by UUID REFERENCES auth.users(id),
+    industry_specific BOOLEAN DEFAULT false,
+    usage_count INTEGER DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Dynamic Item Types System
+CREATE TABLE item_types (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    fields_schema JSONB NOT NULL, -- Dynamic field definitions
+    validation_rules JSONB DEFAULT '{}', -- Validation logic
+    ui_component VARCHAR(100) DEFAULT 'default', -- Which component to render
+    is_system_default BOOLEAN DEFAULT false,
+    created_by UUID REFERENCES auth.users(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Base Templates (with learning capabilities)
+CREATE TABLE base_templates (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    job_title VARCHAR(200),
+    level VARCHAR(50),
+    department VARCHAR(100),
+    industry VARCHAR(100) DEFAULT 'wet_wipes_hygiene',
+    template_data JSONB NOT NULL, -- Complete template definition
+    confidence_score DECIMAL(3,2) DEFAULT 0.5, -- Learning confidence (0.0-1.0)
+    source VARCHAR(50) DEFAULT 'manual' CHECK (source IN ('manual', 'ai_generated', 'learned')),
+    usage_count INTEGER DEFAULT 0,
+    success_rate DECIMAL(3,2) DEFAULT 0.0, -- Success rate from completed handovers
+    created_by UUID REFERENCES auth.users(id),
+    approved_by UUID REFERENCES auth.users(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    approved_at TIMESTAMP WITH TIME ZONE,
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Adaptation Rules (plant/role/industry specific)
+CREATE TABLE adaptation_rules (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    rule_type VARCHAR(50) NOT NULL CHECK (rule_type IN ('plant', 'culture', 'regulation', 'technology', 'role', 'industry')),
+    condition_match JSONB NOT NULL, -- Conditions for rule activation
+    adaptation_logic JSONB NOT NULL, -- How to modify template
+    priority INTEGER DEFAULT 5,
+    is_active BOOLEAN DEFAULT true,
+    created_by UUID REFERENCES auth.users(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Templates (generated instances)
+CREATE TABLE templates (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    base_template_id UUID REFERENCES base_templates(id),
+    job_id UUID REFERENCES jobs(id) NOT NULL,
+    name VARCHAR(200) NOT NULL,
+    description TEXT,
+    version INTEGER DEFAULT 1,
+    status VARCHAR(20) DEFAULT 'draft' CHECK (status IN ('draft', 'approved', 'active', 'archived')),
+    confidence_score DECIMAL(3,2) DEFAULT 0.5,
+    generation_strategy VARCHAR(50) CHECK (generation_strategy IN ('use_existing', 'merge_multiple', 'generate_new')),
+    requires_review BOOLEAN DEFAULT false,
+    learning_mode BOOLEAN DEFAULT false,
+    created_by UUID REFERENCES auth.users(id),
+    approved_by UUID REFERENCES auth.users(id),
+    ai_metadata JSONB DEFAULT '{}',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    approved_at TIMESTAMP WITH TIME ZONE,
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Template Items (dynamic structure)
+CREATE TABLE template_items (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    template_id UUID REFERENCES templates(id) ON DELETE CASCADE,
+    category_id UUID REFERENCES categories(id) NOT NULL,
+    item_type_id UUID REFERENCES item_types(id),
+    title VARCHAR(200) NOT NULL,
+    description TEXT,
+    instructions TEXT,
+    priority INTEGER CHECK (priority BETWEEN 1 AND 10) DEFAULT 5,
+    estimated_minutes INTEGER,
+    is_mandatory BOOLEAN DEFAULT true,
+    sort_order INTEGER,
+    item_data JSONB DEFAULT '{}', -- Flexible item-specific data
+    generated_by VARCHAR(50) DEFAULT 'manual' CHECK (generated_by IN ('manual', 'ai_inference', 'rule_based', 'learned')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Handovers
+CREATE TABLE handovers (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    template_id UUID REFERENCES templates(id) NOT NULL,
+    job_id UUID REFERENCES jobs(id) NOT NULL,
+    leaving_employee_name VARCHAR(200) NOT NULL,
+    leaving_employee_email VARCHAR(255) NOT NULL,
+    incoming_employee_name VARCHAR(200),
+    incoming_employee_email VARCHAR(255),
+    manager_name VARCHAR(200) NOT NULL,
+    manager_email VARCHAR(255) NOT NULL,
+    start_date DATE,
+    due_date DATE NOT NULL,
+    completed_date DATE,
+    status VARCHAR(20) DEFAULT 'created' CHECK (status IN ('created', 'in_progress', 'completed', 'cancelled')),
+    notes TEXT,
+    manager_edits JSONB DEFAULT '[]', -- Track what managers add/remove/modify
+    learning_feedback JSONB DEFAULT '{}', -- Collect improvement data
+    created_by UUID REFERENCES auth.users(id),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Handover Progress (tracks completion of individual items)
+CREATE TABLE handover_progress (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    handover_id UUID REFERENCES handovers(id) ON DELETE CASCADE,
+    template_item_id UUID REFERENCES template_items(id),
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'in_progress', 'completed', 'not_applicable', 'skipped')),
+    actual_minutes INTEGER, -- Track actual time vs estimate
+    difficulty_rating INTEGER CHECK (difficulty_rating BETWEEN 1 AND 5), -- Feedback for learning
+    completion_notes TEXT,
+    completed_by UUID REFERENCES auth.users(id),
+    completed_at TIMESTAMP WITH TIME ZONE,
+    evidence_files JSONB DEFAULT '[]',
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Learning Insights (aggregate data for template improvement)
+CREATE TABLE learning_insights (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    template_id UUID REFERENCES templates(id),
+    job_pattern VARCHAR(200), -- e.g., "Senior Developer in Engineering"
+    insight_type VARCHAR(50) CHECK (insight_type IN ('commonly_added', 'commonly_removed', 'time_estimation', 'difficulty_pattern')),
+    insight_data JSONB NOT NULL,
+    confidence_level DECIMAL(3,2),
+    sample_size INTEGER,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Audit Logs
+CREATE TABLE audit_logs (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    table_name VARCHAR(100) NOT NULL,
+    record_id UUID NOT NULL,
+    action VARCHAR(20) NOT NULL CHECK (action IN ('INSERT', 'UPDATE', 'DELETE')),
+    old_values JSONB,
+    new_values JSONB,
+    changed_by UUID REFERENCES auth.users(id),
+    changed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    ip_address INET
+);
+
+-- User Permissions
+CREATE TABLE user_permissions (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    user_id UUID REFERENCES auth.users(id) NOT NULL,
+    resource_type VARCHAR(50) NOT NULL CHECK (resource_type IN ('organization', 'plant', 'department', 'handover', 'template')),
+    resource_id UUID NOT NULL,
+    permission_level VARCHAR(20) NOT NULL CHECK (permission_level IN ('read', 'write', 'admin')),
+    granted_by UUID REFERENCES auth.users(id),
+    granted_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    expires_at TIMESTAMP WITH TIME ZONE,
+    is_active BOOLEAN DEFAULT true
+);
+
+-- Create indexes for performance
+CREATE INDEX idx_plants_country ON plants(country);
+CREATE INDEX idx_templates_job_id ON templates(job_id);
+CREATE INDEX idx_template_items_category ON template_items(category_id);
+CREATE INDEX idx_handovers_status ON handovers(status);
+CREATE INDEX idx_handover_progress_status ON handover_progress(status);
+CREATE INDEX idx_base_templates_confidence ON base_templates(confidence_score);
+CREATE INDEX idx_adaptation_rules_type ON adaptation_rules(rule_type);
+CREATE INDEX idx_learning_insights_pattern ON learning_insights(job_pattern);
+
+-- Enable Row Level Security
+ALTER TABLE user_profiles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE handovers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE templates ENABLE ROW LEVEL SECURITY;
+ALTER TABLE template_items ENABLE ROW LEVEL SECURITY;
+ALTER TABLE handover_progress ENABLE ROW LEVEL SECURITY;\`;
+
+            // Set the SQL content in the display areas
+            document.getElementById('schema-sql').textContent = sqlFiles.schema;
+            document.getElementById('policies-sql').textContent = 'Loading policies SQL...';
+            document.getElementById('data-sql').textContent = 'Loading data SQL...';
+        });
+    </script>
+</body>
+</html>
