@@ -64,8 +64,8 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<SafeIndex />} />
-              <Route path="/full" element={<Index />} />
+              <Route path="/" element={<Index />} />
+              <Route path="/safe" element={<SafeIndex />} />
               <Route path="/handovers" element={<Handovers />} />
               <Route path="/templates" element={<ComingSoon />} />
               <Route path="/calendar" element={<ComingSoon />} />
