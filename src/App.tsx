@@ -11,6 +11,9 @@ import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
 import DebugRouting from "./pages/DebugRouting";
+import AppleHomeScreen from "./pages/AppleHomeScreen";
+import HandoverWorkspace from "./pages/HandoverWorkspace";
+import TaskFocusView from "./pages/TaskFocusView";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -65,17 +68,21 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Index />} />
+              {/* Apple-style routes - simple and linear */}
+              <Route path="/" element={<AppleHomeScreen />} />
+              <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
+              <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
+              
+              {/* Legacy routes for comparison */}
+              <Route path="/classic" element={<Index />} />
+              <Route path="/classic/handovers" element={<Handovers />} />
+              <Route path="/classic/templates" element={<Templates />} />
+              
+              {/* Utility routes */}
               <Route path="/safe" element={<SafeIndex />} />
-              <Route path="/handovers" element={<Handovers />} />
-              <Route path="/templates" element={<Templates />} />
-              <Route path="/calendar" element={<ComingSoon />} />
-              <Route path="/analytics" element={<ComingSoon />} />
-              <Route path="/organization" element={<ComingSoon />} />
-              <Route path="/settings" element={<ComingSoon />} />
-              <Route path="/help" element={<ComingSoon />} />
               <Route path="/debug" element={<DebugRouting />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              
+              {/* Catch all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
