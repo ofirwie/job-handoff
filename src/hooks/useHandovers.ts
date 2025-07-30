@@ -68,7 +68,7 @@ export function useHandovers(filters?: {
         const { data, error: fetchError } = await query;
 
         if (fetchError) {
-          console.warn('Complex query failed, trying simple query:', fetchError.message);
+          console.warn('Complex query failed, fallback to simple query:', fetchError.message);
           
           // Fallback to simple query
           const { data: simpleData, error: simpleError } = await supabase

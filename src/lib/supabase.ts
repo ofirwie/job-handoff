@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 
 // Fallback to hardcoded values if environment variables are not available (Loveable deployment)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://pjiqcpusjxfjuulojzhc.supabase.co';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MzgyMzI0MiwiZXhwIjoyMDY5Mzk5MjQyfQ.hH8KZ9S6eJSUoUU4LbWefyeaO9Vr5HyQk8_TK-rfbMY';
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MjMyNDIsImV4cCI6MjA2OTM5OTI0Mn0.ruZKcHHKCVmpERhanLNPtGE7RMgex6IjtXZ1MHTcMAs';
 
 if (!supabaseUrl || !supabaseKey) {
   console.error('Supabase configuration missing!', { supabaseUrl: !!supabaseUrl, supabaseKey: !!supabaseKey });
