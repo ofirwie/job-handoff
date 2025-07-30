@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Handover System</title>
+    <meta name="description" content="Intelligent Job Handover Management System" />
+    <meta name="author" content="Smart Handover Team" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Smart Handover System" />
+    <meta property="og:description" content="Streamline job transitions with our intelligent handover system" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Smart Handover System" />
+    <meta name="twitter:description" content="Streamline job transitions with our intelligent handover system" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/assets/index.css" as="style" />
+    <link rel="preload" href="/assets/index.js" as="script" />
+    
+    <!-- Loading styles to prevent FOUC -->
+    <style>
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e2e8f0;
+        border-top: 4px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        margin-top: 16px;
+        color: #64748b;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="root">
+      <!-- Loading fallback -->
+      <div id="loading">
+        <div>
+          <div class="loading-spinner"></div>
+          <div class="loading-text">Loading Smart Handover System...</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hide loading once React takes over -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        // Hide loading after a reasonable timeout if React doesn't load
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          if (loading && !document.querySelector('[data-reactroot]')) {
+            loading.innerHTML = '<div style="text-align: center; color: #ef4444;">Failed to load application. Please refresh the page.</div>';
+          }
+        }, 10000);
+      });
+    </script>
+  </body>
+</html>
