@@ -4,14 +4,52 @@ import { KPICards } from "@/components/dashboard/KPICards";
 import { RecentActivity } from "@/components/dashboard/RecentActivity";
 import { HandoverPipeline } from "@/components/dashboard/HandoverPipeline";
 import { UpcomingDeadlines } from "@/components/dashboard/UpcomingDeadlines";
+import { DebugInfo } from "@/components/DebugInfo";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const [showDebug, setShowDebug] = useState(false);
+
+  // Check if we should show debug mode (environment variables missing)
+  const hasEnvVars = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+  if (!hasEnvVars || showDebug) {
+    return (
+      <div className="min-h-screen bg-background p-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-between mb-6">
+            <h1 className="text-2xl font-bold">Job Handoff System - Debug Mode</h1>
+            {hasEnvVars && (
+              <Button onClick={() => setShowDebug(false)} variant="outline">
+                Exit Debug Mode
+              </Button>
+            )}
+          </div>
+          <DebugInfo />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <div className="flex">
         <Sidebar />
         <main className="flex-1 p-6 space-y-6">
+          {/* Debug Button */}
+          <div className="flex justify-end">
+            <Button 
+              onClick={() => setShowDebug(true)} 
+              variant="ghost" 
+              size="sm"
+              className="text-xs text-muted-foreground"
+            >
+              Debug Mode
+            </Button>
+          </div>
+
           {/* Welcome Section */}
           <div className="flex items-center justify-between">
             <div>
