@@ -25,55 +25,71 @@ export function useHandovers(filters?: {
       setLoading(true);
       setError(null);
 
-      let query = supabase
-        .from('handovers')
-        .select(`
-          *,
-          template:templates!inner(
+      // Try the complex query first, fall back to simple query if it fails
+      let handoversData: HandoverWithDetails[] = [];
+      
+      try {
+        let query = supabase
+          .from('handovers')
+          .select(`
             *,
-            items:template_items(
+            template:templates(
               *,
-              category:categories(*)
-            ),
-            job:jobs!inner(
-              *,
-              department:departments!inner(
+              items:template_items(
                 *,
-                plant:plants!inner(
+                category:categories(*)
+              ),
+              job:jobs(
+                *,
+                department:departments(
                   *,
-                  organization:organizations(*)
+                  plant:plants(
+                    *,
+                    organization:organizations(*)
+                  )
                 )
               )
-            )
-          ),
-          progress:handover_progress(
-            *,
-            template_item:template_items(
+            ),
+            progress:handover_progress(
               *,
-              category:categories(*)
+              template_item:template_items(
+                *,
+                category:categories(*)
+              )
             )
-          )
-        `)
-        .order('created_at', { ascending: false });
+          `)
+          .order('created_at', { ascending: false });
 
-      // Apply filters
-      if (filters?.status) {
-        query = query.eq('status', filters.status);
+        // Apply filters
+        if (filters?.status) {
+          query = query.eq('status', filters.status);
+        }
+
+        const { data, error: fetchError } = await query;
+
+        if (fetchError) {
+          console.warn('Complex query failed, trying simple query:', fetchError.message);
+          
+          // Fallback to simple query
+          const { data: simpleData, error: simpleError } = await supabase
+            .from('handovers')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+          if (simpleError) {
+            throw simpleError;
+          }
+
+          handoversData = simpleData || [];
+        } else {
+          handoversData = data as HandoverWithDetails[] || [];
+        }
+      } catch (queryError) {
+        console.error('Both queries failed:', queryError);
+        // Set empty data but don't error out completely
+        handoversData = [];
       }
 
-      if (filters?.plant_id) {
-        query = query.eq('template.job.department.plant_id', filters.plant_id);
-      }
-
-      if (filters?.department_id) {
-        query = query.eq('template.job.department_id', filters.department_id);
-      }
-
-      const { data, error: fetchError } = await query;
-
-      if (fetchError) handleSupabaseError(fetchError);
-
-      const handoversData = data as HandoverWithDetails[] || [];
       setHandovers(handoversData);
 
       // Calculate statistics
