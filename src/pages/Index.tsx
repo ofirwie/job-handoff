@@ -12,9 +12,10 @@ const Index = () => {
   const [showDebug, setShowDebug] = useState(false);
 
   // Check if we should show debug mode (environment variables missing)
-  const hasEnvVars = import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY;
+  const hasEnvVars = (import.meta.env.VITE_SUPABASE_URL || 'https://pjiqcpusjxfjuulojzhc.supabase.co') && 
+                     (import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MzgyMzI0MiwiZXhwIjoyMDY5Mzk5MjQyfQ.hH8KZ9S6eJSUoUU4LbWefyeaO9Vr5HyQk8_TK-rfbMY');
 
-  if (!hasEnvVars || showDebug) {
+  if (showDebug) {
     return (
       <div className="min-h-screen bg-background p-6">
         <div className="max-w-4xl mx-auto">
