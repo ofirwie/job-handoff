@@ -114,6 +114,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 "nav-item",
                 isActive && "nav-item-active"
               )}
+              onClick={() => {
+                console.log('🔗 Sidebar navigation clicked:', item.href);
+                console.log('Current location:', location.pathname);
+              }}
             >
               <item.icon className="h-5 w-5 shrink-0" />
               {!isCollapsed && (

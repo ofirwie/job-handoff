@@ -9,6 +9,7 @@ import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
+import DebugRouting from "./pages/DebugRouting";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,30 +48,40 @@ function ErrorFallback({ error, resetErrorBoundary }: any) {
   );
 }
 
-const App = () => (
-  <ErrorBoundary FallbackComponent={ErrorFallback}>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<SafeIndex />} />
-            <Route path="/full" element={<Index />} />
-            <Route path="/handovers" element={<Handovers />} />
-            <Route path="/templates" element={<ComingSoon />} />
-            <Route path="/calendar" element={<ComingSoon />} />
-            <Route path="/analytics" element={<ComingSoon />} />
-            <Route path="/organization" element={<ComingSoon />} />
-            <Route path="/settings" element={<ComingSoon />} />
-            <Route path="/help" element={<ComingSoon />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </ErrorBoundary>
-);
+const App = () => {
+  console.log('🚀 App component rendering');
+  console.log('Current URL:', window.location.href);
+  console.log('Environment:', {
+    VITE_SUPABASE_URL: import.meta.env.VITE_SUPABASE_URL,
+    hasSupabaseKey: !!import.meta.env.VITE_SUPABASE_ANON_KEY
+  });
+
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<SafeIndex />} />
+              <Route path="/full" element={<Index />} />
+              <Route path="/handovers" element={<Handovers />} />
+              <Route path="/templates" element={<ComingSoon />} />
+              <Route path="/calendar" element={<ComingSoon />} />
+              <Route path="/analytics" element={<ComingSoon />} />
+              <Route path="/organization" element={<ComingSoon />} />
+              <Route path="/settings" element={<ComingSoon />} />
+              <Route path="/help" element={<ComingSoon />} />
+              <Route path="/debug" element={<DebugRouting />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
+  );
+};
 
 export default App;
