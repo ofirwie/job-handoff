@@ -14,14 +14,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Check environment variables
+    // Check environment variables - Google ones are optional for initial deployment
     const envStatus = {
       GOOGLE_SERVICE_ACCOUNT_KEY: !!process.env.GOOGLE_SERVICE_ACCOUNT_KEY,
       GOOGLE_SHEETS_ID: !!process.env.GOOGLE_SHEETS_ID,
       GOOGLE_DRIVE_PARENT_FOLDER_ID: !!process.env.GOOGLE_DRIVE_PARENT_FOLDER_ID,
       CRON_SECRET: !!process.env.CRON_SECRET,
       SUPABASE_SERVICE_ROLE_KEY: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
-      VITE_SUPABASE_URL: !!process.env.VITE_SUPABASE_URL
+      VITE_SUPABASE_URL: !!(process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://pjiqcpusjxfjuulojzhc.supabase.co')
     };
 
     // Parse service account if exists
@@ -63,7 +63,8 @@ export default async function handler(req, res) {
       nextRun: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString()
     };
 
-    // Overall status
+    // Overall status - require only Supabase for initial deployment
+    const supabaseConfigured = envStatus.VITE_SUPABASE_URL;
     const allConfigured = Object.values(envStatus).every(v => v) && serviceAccountValid;
 
     res.status(200).json({
@@ -85,7 +86,9 @@ export default async function handler(req, res) {
       },
       message: allConfigured 
         ? 'All Google services are configured and ready'
-        : 'Some configuration steps are incomplete'
+        : supabaseConfigured 
+          ? 'Supabase configured. Use Settings wizard to complete Google setup.'
+          : 'Initial setup incomplete'
     });
 
   } catch (error) {
