@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Plus, AlertCircle, ChevronRight } from "lucide-react";
+import { Plus, AlertCircle, ChevronRight, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useHandovers } from "@/hooks/useAppleHandovers";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -41,13 +41,23 @@ const AppleHomeScreen = () => {
       <div className="bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Handovers</h1>
-          <Button 
-            onClick={() => setShowNewHandover(true)}
-            className="rounded-full"
-            size="sm"
-          >
-            <Plus className="h-4 w-4" />
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              onClick={() => navigate('/settings')}
+              variant="ghost"
+              className="rounded-full"
+              size="sm"
+            >
+              <Settings className="h-4 w-4" />
+            </Button>
+            <Button 
+              onClick={() => setShowNewHandover(true)}
+              className="rounded-full"
+              size="sm"
+            >
+              <Plus className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </div>
 

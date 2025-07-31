@@ -10,6 +10,7 @@ import Handovers from "./pages/Handovers";
 import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
+import Settings from "./pages/Settings";
 import DebugRouting from "./pages/DebugRouting";
 import AppleHomeScreen from "./pages/AppleHomeScreen";
 import HandoverWorkspace from "./pages/HandoverWorkspace";
@@ -72,6 +73,7 @@ const App = () => {
               <Route path="/" element={<AppleHomeScreen />} />
               <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
               <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
+              <Route path="/settings" element={<Settings />} />
               
               {/* Legacy routes for comparison */}
               <Route path="/classic" element={<Index />} />
