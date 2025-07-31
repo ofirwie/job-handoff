@@ -29,3 +29,10 @@
 {"level":"info","message":"  - http://YOUR_IP_ADDRESS:3001","service":"handover-system","timestamp":"2025-07-31 09:16:07"}
 {"level":"info","message":"Environment: undefined","service":"handover-system","timestamp":"2025-07-31 09:16:07"}
 {"level":"info","message":"CORS Origin: undefined","service":"handover-system","timestamp":"2025-07-31 09:16:07"}
+{"level":"info","message":"Handover System API server running on:","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"  - http://localhost:3001","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"  - http://127.0.0.1:3001","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"  - http://YOUR_IP_ADDRESS:3001","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"Environment: undefined","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"CORS Origin: undefined","service":"handover-system","timestamp":"2025-07-31 09:16:17"}
+{"level":"info","message":"GET /health - 192.168.0.167","service":"handover-system","timestamp":"2025-07-31 09:18:50"}

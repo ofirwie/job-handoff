@@ -5,8 +5,19 @@
       "destination": "/index.html"
     }
   ],
+  "crons": [
+    {
+      "path": "/api/cron/sync-sheets",
+      "schedule": "0 */2 * * *"
+    }
+  ],
   "env": {
     "VITE_SUPABASE_URL": "https://pjiqcpusjxfjuulojzhc.supabase.co",
     "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqaXFjcHVzanhmanV1bG9qemhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MjMyNDIsImV4cCI6MjA2OTM5OTI0Mn0.ruZKcHHKCVmpERhanLNPtGE7RMgex6IjtXZ1MHTcMAs"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 300
+    }
   }
 }

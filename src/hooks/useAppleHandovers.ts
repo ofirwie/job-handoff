@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase';
 
 interface SimpleHandover {
   id: string;
@@ -6,11 +7,13 @@ interface SimpleHandover {
   role: string;
   department: string;
   progress: number;
-  status: 'pending' | 'in_progress' | 'review' | 'completed' | 'overdue';
+  status: 'created' | 'in_progress' | 'completed' | 'approved' | 'rejected' | 'needs_revision';
   statusLabel: string;
   dueDate: string;
   timeLeft: string;
   priority: 'high' | 'medium' | 'low';
+  driveFolder?: string;
+  jobCode?: string;
 }
 
 interface UrgentAction {
@@ -27,6 +30,8 @@ export function useHandovers() {
   useEffect(() => {
     // Calculate time left in human-readable format
     const getTimeLeft = (dueDate: string): string => {
+      if (!dueDate) return 'No deadline';
+      
       const now = new Date();
       const due = new Date(dueDate);
       const diffTime = due.getTime() - now.getTime();
@@ -40,88 +45,104 @@ export function useHandovers() {
       return `${Math.ceil(diffDays / 30)} months left`;
     };
 
-    // For now, return mock data in Apple-style format
-    const mockHandovers: SimpleHandover[] = [
-      {
-        id: '1',
-        employeeName: 'John Smith',
-        role: 'Senior Developer',
-        department: 'Engineering',
-        progress: 75,
-        status: 'in_progress',
-        statusLabel: 'In Progress',
-        dueDate: '2025-08-15',
-        timeLeft: getTimeLeft('2025-08-15'),
-        priority: 'high'
-      },
-      {
-        id: '2',
-        employeeName: 'Lisa Garcia',
-        role: 'Marketing Manager',
-        department: 'Marketing',
-        progress: 45,
-        status: 'in_progress',
-        statusLabel: 'In Progress',
-        dueDate: '2025-08-20',
-        timeLeft: getTimeLeft('2025-08-20'),
-        priority: 'medium'
-      },
-      {
-        id: '3',
-        employeeName: 'Mike Chen',
-        role: 'Data Analyst',
-        department: 'Analytics',
-        progress: 90,
-        status: 'review',
-        statusLabel: 'Ready for Review',
-        dueDate: '2025-08-10',
-        timeLeft: 'Review needed',
-        priority: 'low'
-      },
-      {
-        id: '4',
-        employeeName: 'Sarah Williams',
-        role: 'HR Specialist',
-        department: 'Human Resources',
-        progress: 20,
-        status: 'pending',
-        statusLabel: 'Just Started',
-        dueDate: '2025-09-01',
-        timeLeft: getTimeLeft('2025-09-01'),
-        priority: 'medium'
+    // Get status label for UI display
+    const getStatusLabel = (status: string): string => {
+      switch (status) {
+        case 'created': return 'Just Created';
+        case 'in_progress': return 'In Progress';
+        case 'completed': return 'Completed';
+        case 'approved': return 'Approved';
+        case 'rejected': return 'Needs Changes';
+        case 'needs_revision': return 'Needs Revision';
+        default: return 'Unknown';
       }
-    ];
+    };
 
-    // Check for urgent actions - Apple style intelligence
-    const reviewNeeded = mockHandovers.filter(h => h.status === 'review');
-    const overdue = mockHandovers.filter(h => h.timeLeft === 'Overdue');
-    const dueToday = mockHandovers.filter(h => h.timeLeft === 'Due today');
+    // Calculate priority based on due date and status
+    const calculatePriority = (dueDate: string, status: string): 'high' | 'medium' | 'low' => {
+      if (status === 'completed' && status !== 'approved') return 'high'; // Needs review
+      
+      const timeLeft = getTimeLeft(dueDate);
+      if (timeLeft === 'Overdue' || timeLeft === 'Due today') return 'high';
+      if (timeLeft.includes('days left') && parseInt(timeLeft) <= 3) return 'high';
+      if (timeLeft.includes('week')) return 'medium';
+      return 'low';
+    };
 
-    if (overdue.length > 0) {
-      setUrgentAction({
-        handoverId: overdue[0].id,
-        title: 'Overdue Handover',
-        description: `${overdue[0].employeeName}'s handover is overdue and needs immediate attention`
-      });
-    } else if (dueToday.length > 0) {
-      setUrgentAction({
-        handoverId: dueToday[0].id,
-        title: 'Due Today',
-        description: `${dueToday[0].employeeName}'s handover is due today`
-      });
-    } else if (reviewNeeded.length > 0) {
-      setUrgentAction({
-        handoverId: reviewNeeded[0].id,
-        title: 'Review Required',
-        description: `${reviewNeeded[0].employeeName}'s handover is ready for your review`
-      });
-    }
+    // Fetch handovers from Supabase
+    const fetchHandovers = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('handover_summary')
+          .select('*')
+          .order('created_at', { ascending: false });
 
-    // Simulate loading with smooth transition
-    setTimeout(() => {
-      setHandovers(mockHandovers);
-      setLoading(false);
-    }, 300);
+        if (error) {
+          console.error('Error fetching handovers:', error);
+          setLoading(false);
+          return;
+        }
+
+        const processedHandovers: SimpleHandover[] = (data || []).map(handover => ({
+          id: handover.id,
+          employeeName: handover.employee_name || 'Unknown Employee',
+          role: handover.job_title || 'Unknown Role',
+          department: handover.department || 'Unknown Department',
+          progress: handover.progress_percentage || 0,
+          status: handover.status,
+          statusLabel: getStatusLabel(handover.status),
+          dueDate: handover.departure_date || '',
+          timeLeft: getTimeLeft(handover.departure_date),
+          priority: calculatePriority(handover.departure_date, handover.status),
+          driveFolder: handover.drive_folder_url,
+          jobCode: handover.job_code
+        }));
+
+        setHandovers(processedHandovers);
+
+        // Find urgent actions
+        const reviewNeeded = processedHandovers.filter(h => h.status === 'completed');
+        const overdue = processedHandovers.filter(h => h.timeLeft === 'Overdue');
+        const dueToday = processedHandovers.filter(h => h.timeLeft === 'Due today');
+        const needsRevision = processedHandovers.filter(h => h.status === 'needs_revision');
+
+        if (needsRevision.length > 0) {
+          setUrgentAction({
+            handoverId: needsRevision[0].id,
+            title: 'Revision Required',
+            description: `${needsRevision[0].employeeName}'s handover needs revision`
+          });
+        } else if (overdue.length > 0) {
+          setUrgentAction({
+            handoverId: overdue[0].id,
+            title: 'Overdue Handover',
+            description: `${overdue[0].employeeName}'s handover is overdue and needs immediate attention`
+          });
+        } else if (dueToday.length > 0) {
+          setUrgentAction({
+            handoverId: dueToday[0].id,
+            title: 'Due Today',
+            description: `${dueToday[0].employeeName}'s handover is due today`
+          });
+        } else if (reviewNeeded.length > 0) {
+          setUrgentAction({
+            handoverId: reviewNeeded[0].id,
+            title: 'Review Required',
+            description: `${reviewNeeded[0].employeeName}'s handover is ready for your review`
+          });
+        } else {
+          setUrgentAction(null);
+        }
+
+      } catch (error) {
+        console.error('Error in fetchHandovers:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Call the fetch function
+    fetchHandovers();
   }, []);
 
   return {
