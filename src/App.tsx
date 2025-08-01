@@ -80,8 +80,8 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <Routes>
-              {/* Monday.com styled main routes */}
-              <Route path="/" element={<NavigationDemo />} />
+              {/* OFIR AI styled main routes */}
+              <Route path="/" element={<OFIRHome />} />
               <Route path="/main" element={<OFIRHome />} />
               <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
               <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
@@ -98,6 +98,7 @@ const App = () => {
               
               {/* Settings and utilities */}
               <Route path="/demo" element={<NavigationDemo />} />
+              <Route path="/navigation-demo" element={<NavigationDemo />} />
               <Route path="/settings" element={<Settings />} />
               
               {/* Legacy routes for comparison */}
