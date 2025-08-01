@@ -1,0 +1,610 @@
+/* Monday.com Design System - Professional Handover System */
+
+/* CSS Variables for consistent theming */
+:root {
+  /* Primary Colors */
+  --monday-primary-color: #0073ea;
+  --monday-primary-hover: #005bb5;
+  --monday-primary-light: #e3f2fd;
+  
+  /* Status Colors */
+  --status-done-bg: #dcfce7;
+  --status-done-text: #166534;
+  --status-working-bg: #fed7aa;
+  --status-working-text: #9a3412;
+  --status-stuck-bg: #fee2e2;
+  --status-stuck-text: #991b1b;
+  --status-not-started-bg: #f3f4f6;
+  --status-not-started-text: #374151;
+  --status-pending-bg: #e0e7ff;
+  --status-pending-text: #3730a3;
+  
+  /* Priority Colors */
+  --priority-high: #ef4444;
+  --priority-medium: #f59e0b;
+  --priority-low: #22c55e;
+  
+  /* UI Colors */
+  --monday-background: #f6f7fb;
+  --monday-surface: #ffffff;
+  --monday-border: #d0d4e4;
+  --monday-border-light: #e6e9ef;
+  --monday-text-primary: #323338;
+  --monday-text-secondary: #676879;
+  --monday-text-disabled: #a1a6b4;
+  
+  /* Interactive Colors */
+  --monday-hover-bg: #f5f6fa;
+  --monday-selected-bg: #e3f2fd;
+  --monday-focus-ring: #0073ea;
+  
+  /* Spacing */
+  --monday-spacing-xs: 4px;
+  --monday-spacing-sm: 8px;
+  --monday-spacing-md: 16px;
+  --monday-spacing-lg: 24px;
+  --monday-spacing-xl: 32px;
+  --monday-spacing-2xl: 48px;
+  
+  /* Border Radius */
+  --monday-radius-sm: 4px;
+  --monday-radius-md: 8px;
+  --monday-radius-lg: 12px;
+  --monday-radius-xl: 16px;
+  
+  /* Shadows */
+  --monday-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --monday-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --monday-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --monday-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Typography */
+  --monday-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --monday-font-size-xs: 12px;
+  --monday-font-size-sm: 14px;
+  --monday-font-size-base: 16px;
+  --monday-font-size-lg: 18px;
+  --monday-font-size-xl: 20px;
+  --monday-font-size-2xl: 24px;
+  --monday-font-size-3xl: 30px;
+  
+  /* Line Heights */
+  --monday-leading-tight: 1.25;
+  --monday-leading-normal: 1.5;
+  --monday-leading-relaxed: 1.625;
+  
+  /* Font Weights */
+  --monday-font-normal: 400;
+  --monday-font-medium: 500;
+  --monday-font-semibold: 600;
+  --monday-font-bold: 700;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--monday-font-family);
+  color: var(--monday-text-primary);
+  background-color: var(--monday-background);
+  line-height: var(--monday-leading-normal);
+  font-size: var(--monday-font-size-base);
+  margin: 0;
+  padding: 0;
+}
+
+/* Monday.com Button Styles */
+.btn-monday {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--monday-spacing-sm) var(--monday-spacing-md);
+  border-radius: var(--monday-radius-sm);
+  font-size: var(--monday-font-size-sm);
+  font-weight: var(--monday-font-medium);
+  line-height: var(--monday-leading-tight);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 32px;
+  gap: var(--monday-spacing-xs);
+}
+
+.btn-monday:focus {
+  outline: 2px solid var(--monday-focus-ring);
+  outline-offset: 2px;
+}
+
+.btn-monday:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Variants */
+.btn-monday-primary {
+  background-color: var(--monday-primary-color);
+  color: white;
+}
+
+.btn-monday-primary:hover:not(:disabled) {
+  background-color: var(--monday-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--monday-shadow-md);
+}
+
+.btn-monday-secondary {
+  background-color: var(--monday-surface);
+  color: var(--monday-text-primary);
+  border: 1px solid var(--monday-border);
+}
+
+.btn-monday-secondary:hover:not(:disabled) {
+  background-color: var(--monday-hover-bg);
+  border-color: var(--monday-primary-color);
+}
+
+.btn-monday-ghost {
+  background-color: transparent;
+  color: var(--monday-text-secondary);
+}
+
+.btn-monday-ghost:hover:not(:disabled) {
+  background-color: var(--monday-hover-bg);
+  color: var(--monday-text-primary);
+}
+
+/* Button Sizes */
+.btn-monday-sm {
+  padding: 4px 8px;
+  font-size: var(--monday-font-size-xs);
+  min-height: 24px;
+}
+
+.btn-monday-lg {
+  padding: 12px 24px;
+  font-size: var(--monday-font-size-base);
+  min-height: 44px;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: var(--monday-font-size-xs);
+  font-weight: var(--monday-font-medium);
+  line-height: 1;
+  gap: 4px;
+}
+
+.status-done {
+  background-color: var(--status-done-bg);
+  color: var(--status-done-text);
+}
+
+.status-working {
+  background-color: var(--status-working-bg);
+  color: var(--status-working-text);
+}
+
+.status-stuck {
+  background-color: var(--status-stuck-bg);
+  color: var(--status-stuck-text);
+}
+
+.status-not-started {
+  background-color: var(--status-not-started-bg);
+  color: var(--status-not-started-text);
+}
+
+.status-pending {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+/* Priority Indicators */
+.priority-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority-high {
+  background-color: var(--priority-high);
+}
+
+.priority-medium {
+  background-color: var(--priority-medium);
+}
+
+.priority-low {
+  background-color: var(--priority-low);
+}
+
+/* Progress Bars */
+.progress-container {
+  width: 100%;
+  background-color: var(--monday-border-light);
+  border-radius: var(--monday-radius-sm);
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--monday-primary-color), #2563eb);
+  height: 100%;
+  border-radius: var(--monday-radius-sm);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Monday.com Card Styles */
+.monday-card {
+  background-color: var(--monday-surface);
+  border-radius: var(--monday-radius-md);
+  border: 1px solid var(--monday-border-light);
+  box-shadow: var(--monday-shadow-sm);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.monday-card:hover {
+  box-shadow: var(--monday-shadow-md);
+  border-color: var(--monday-border);
+}
+
+.monday-card-header {
+  padding: var(--monday-spacing-lg);
+  border-bottom: 1px solid var(--monday-border-light);
+  background-color: var(--monday-surface);
+}
+
+.monday-card-content {
+  padding: var(--monday-spacing-lg);
+}
+
+.monday-card-title {
+  font-size: var(--monday-font-size-lg);
+  font-weight: var(--monday-font-semibold);
+  color: var(--monday-text-primary);
+  margin: 0;
+  line-height: var(--monday-leading-tight);
+}
+
+.monday-card-subtitle {
+  font-size: var(--monday-font-size-sm);
+  color: var(--monday-text-secondary);
+  margin: 4px 0 0 0;
+  line-height: var(--monday-leading-normal);
+}
+
+/* KPI Cards */
+.kpi-card {
+  background-color: var(--monday-surface);
+  border-radius: var(--monday-radius-lg);
+  padding: var(--monday-spacing-lg);
+  border: 1px solid var(--monday-border-light);
+  box-shadow: var(--monday-shadow-sm);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--monday-shadow-lg);
+  border-color: var(--monday-primary-color);
+}
+
+.kpi-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--monday-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--monday-spacing-md);
+}
+
+.kpi-card-value {
+  font-size: var(--monday-font-size-2xl);
+  font-weight: var(--monday-font-bold);
+  color: var(--monday-text-primary);
+  margin: 0;
+  line-height: var(--monday-leading-tight);
+}
+
+.kpi-card-label {
+  font-size: var(--monday-font-size-sm);
+  color: var(--monday-text-secondary);
+  margin: 4px 0 0 0;
+  line-height: var(--monday-leading-normal);
+}
+
+.kpi-card-trend {
+  position: absolute;
+  top: var(--monday-spacing-md);
+  right: var(--monday-spacing-md);
+  font-size: var(--monday-font-size-xs);
+  font-weight: var(--monday-font-medium);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.kpi-trend-up {
+  color: var(--priority-low);
+}
+
+.kpi-trend-down {
+  color: var(--priority-high);
+}
+
+/* Monday.com Table Styles */
+.monday-table {
+  width: 100%;
+  background-color: var(--monday-surface);
+  border-radius: var(--monday-radius-md);
+  border: 1px solid var(--monday-border-light);
+  box-shadow: var(--monday-shadow-sm);
+  overflow: hidden;
+}
+
+.monday-table-header {
+  background-color: #f8f9fd;
+  border-bottom: 1px solid var(--monday-border-light);
+}
+
+.monday-table-header th {
+  padding: var(--monday-spacing-md);
+  text-align: right;
+  font-size: var(--monday-font-size-sm);
+  font-weight: var(--monday-font-semibold);
+  color: var(--monday-text-secondary);
+  border-right: 1px solid var(--monday-border-light);
+}
+
+.monday-table-header th:last-child {
+  border-right: none;
+}
+
+.monday-table-row {
+  border-bottom: 1px solid var(--monday-border-light);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.monday-table-row:hover {
+  background-color: var(--monday-hover-bg);
+}
+
+.monday-table-row:focus {
+  background-color: var(--monday-selected-bg);
+  outline: none;
+}
+
+.monday-table-row:last-child {
+  border-bottom: none;
+}
+
+.monday-table-cell {
+  padding: var(--monday-spacing-md);
+  font-size: var(--monday-font-size-sm);
+  color: var(--monday-text-primary);
+  border-right: 1px solid var(--monday-border-light);
+  vertical-align: middle;
+}
+
+.monday-table-cell:last-child {
+  border-right: none;
+}
+
+/* Input Styles */
+.monday-input {
+  width: 100%;
+  padding: var(--monday-spacing-sm) var(--monday-spacing-md);
+  border: 1px solid var(--monday-border);
+  border-radius: var(--monday-radius-sm);
+  font-size: var(--monday-font-size-sm);
+  color: var(--monday-text-primary);
+  background-color: var(--monday-surface);
+  transition: all 0.2s ease;
+  min-height: 32px;
+}
+
+.monday-input:focus {
+  outline: none;
+  border-color: var(--monday-primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 115, 234, 0.1);
+}
+
+.monday-input::placeholder {
+  color: var(--monday-text-disabled);
+}
+
+/* Search Input */
+.monday-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.monday-search-input {
+  padding-right: 40px;
+}
+
+.monday-search-icon {
+  position: absolute;
+  left: var(--monday-spacing-md);
+  color: var(--monday-text-disabled);
+  pointer-events: none;
+}
+
+/* Dropdown Styles */
+.monday-select {
+  position: relative;
+  display: inline-block;
+}
+
+.monday-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--monday-spacing-sm) var(--monday-spacing-md);
+  border: 1px solid var(--monday-border);
+  border-radius: var(--monday-radius-sm);
+  background-color: var(--monday-surface);
+  font-size: var(--monday-font-size-sm);
+  color: var(--monday-text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 32px;
+}
+
+.monday-select-trigger:hover {
+  border-color: var(--monday-primary-color);
+}
+
+.monday-select-trigger:focus {
+  outline: none;
+  border-color: var(--monday-primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 115, 234, 0.1);
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: var(--monday-radius-sm);
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--monday-border-light);
+  border-top: 2px solid var(--monday-primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Animations */
+.success-checkmark {
+  animation: checkmark 0.6s ease-in-out;
+}
+
+@keyframes checkmark {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  :root {
+    --monday-spacing-md: 12px;
+    --monday-spacing-lg: 16px;
+    --monday-spacing-xl: 24px;
+  }
+  
+  .monday-card-content {
+    padding: var(--monday-spacing-md);
+  }
+  
+  .monday-table {
+    display: none;
+  }
+  
+  .mobile-card-view {
+    display: block;
+  }
+  
+  .kpi-card {
+    padding: var(--monday-spacing-md);
+  }
+  
+  .kpi-card-value {
+    font-size: var(--monday-font-size-xl);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-card-view {
+    display: none;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible for better keyboard navigation */
+.btn-monday:focus-visible,
+.monday-input:focus-visible,
+.monday-select-trigger:focus-visible,
+.monday-table-row:focus-visible {
+  outline: 2px solid var(--monday-focus-ring);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --monday-border: #000000;
+    --monday-text-secondary: #000000;
+    --monday-primary-color: #0000ff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

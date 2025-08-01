@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
+import "./styles/monday-design-system.css";
 import Index from "./pages/Index";
 import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
@@ -15,6 +16,11 @@ import DebugRouting from "./pages/DebugRouting";
 import AppleHomeScreen from "./pages/AppleHomeScreen";
 import HandoverWorkspace from "./pages/HandoverWorkspace";
 import TaskFocusView from "./pages/TaskFocusView";
+import EmployeeDashboardDemo from "./pages/EmployeeDashboardDemo";
+import ManagerDashboardDemo from "./pages/ManagerDashboardDemo";
+import AdminDashboardDemo from "./pages/AdminDashboardDemo";
+import MondayHandoverOverview from "./components/MondayHandoverOverview";
+import NavigationDemo from "./components/NavigationDemo";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -69,16 +75,26 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <Routes>
-              {/* Apple-style routes - simple and linear */}
-              <Route path="/" element={<AppleHomeScreen />} />
+              {/* Monday.com styled main routes */}
+              <Route path="/" element={<NavigationDemo />} />
+              <Route path="/main" element={<MondayHandoverOverview userRole={{ type: 'employee', email: 'demo@albaad.com', name: 'משתמש דמו' }} />} />
               <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
               <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
+              
+              {/* Role-based dashboards */}
+              <Route path="/employee" element={<EmployeeDashboardDemo />} />
+              <Route path="/manager" element={<ManagerDashboardDemo />} />
+              <Route path="/admin" element={<AdminDashboardDemo />} />
+              
+              {/* Settings and utilities */}
+              <Route path="/demo" element={<NavigationDemo />} />
               <Route path="/settings" element={<Settings />} />
               
               {/* Legacy routes for comparison */}
               <Route path="/classic" element={<Index />} />
               <Route path="/classic/handovers" element={<Handovers />} />
               <Route path="/classic/templates" element={<Templates />} />
+              <Route path="/apple" element={<AppleHomeScreen />} />
               
               {/* Utility routes */}
               <Route path="/safe" element={<SafeIndex />} />
