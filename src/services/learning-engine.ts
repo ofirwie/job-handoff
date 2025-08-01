@@ -361,7 +361,7 @@ export class LearningEngine {
     const itemFrequency = new Map<string, { count: number; items: any[] }>();
 
     for (const insight of insights) {
-      const items = insight.insight_data.items || [];
+      const items = (insight.insight_data as any)?.items || [];
       
       for (const item of items) {
         const normalizedTitle = this.normalizeItemTitle(item.title);
@@ -421,7 +421,7 @@ export class LearningEngine {
     const removalFrequency = new Map<string, number>();
 
     for (const insight of insights) {
-      const itemIds = insight.insight_data.item_ids || [];
+      const itemIds = (insight.insight_data as any)?.item_ids || [];
       
       for (const itemId of itemIds) {
         removalFrequency.set(itemId, (removalFrequency.get(itemId) || 0) + 1);
@@ -468,7 +468,7 @@ export class LearningEngine {
     sampleSize: number,
     confidence: number
   ): LearningPattern {
-    const allDiscrepancies = insights.flatMap(insight => insight.insight_data.discrepancies || []);
+    const allDiscrepancies = insights.flatMap(insight => (insight.insight_data as any)?.discrepancies || []);
     
     // Calculate average discrepancy per item
     const itemDiscrepancies = new Map<string, { total: number; count: number; estimated: number }>();
@@ -521,7 +521,7 @@ export class LearningEngine {
     sampleSize: number,
     confidence: number
   ): LearningPattern {
-    const allRatings = insights.flatMap(insight => insight.insight_data.ratings || []);
+    const allRatings = insights.flatMap(insight => (insight.insight_data as any)?.ratings || []);
     
     // Calculate average difficulty per item
     const itemDifficulties = new Map<string, { total: number; count: number }>();
