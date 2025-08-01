@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import "./styles/monday-design-system.css";
+import "./styles/ofir-ai-design-system.css";
 import Index from "./pages/Index";
 import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
@@ -21,6 +22,10 @@ import ManagerDashboardDemo from "./pages/ManagerDashboardDemo";
 import AdminDashboardDemo from "./pages/AdminDashboardDemo";
 import NavigationDemo from "./components/NavigationDemo";
 import MondayHome from "./pages/MondayHome";
+import OFIRHome from "./pages/OFIRHome";
+import OFIREmployeeDashboard from "./pages/OFIREmployeeDashboard";
+import OFIRManagerDashboard from "./pages/OFIRManagerDashboard";
+import OFIRAdminDashboard from "./pages/OFIRAdminDashboard";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -77,14 +82,19 @@ const App = () => {
             <Routes>
               {/* Monday.com styled main routes */}
               <Route path="/" element={<NavigationDemo />} />
-              <Route path="/main" element={<MondayHome />} />
+              <Route path="/main" element={<OFIRHome />} />
               <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
               <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
               
-              {/* Role-based dashboards */}
-              <Route path="/employee" element={<EmployeeDashboardDemo />} />
-              <Route path="/manager" element={<ManagerDashboardDemo />} />
-              <Route path="/admin" element={<AdminDashboardDemo />} />
+              {/* Role-based dashboards - OFIR AI Style */}
+              <Route path="/employee" element={<OFIREmployeeDashboard />} />
+              <Route path="/manager" element={<OFIRManagerDashboard />} />
+              <Route path="/admin" element={<OFIRAdminDashboard />} />
+              
+              {/* Legacy role-based dashboards */}
+              <Route path="/employee-demo" element={<EmployeeDashboardDemo />} />
+              <Route path="/manager-demo" element={<ManagerDashboardDemo />} />
+              <Route path="/admin-demo" element={<AdminDashboardDemo />} />
               
               {/* Settings and utilities */}
               <Route path="/demo" element={<NavigationDemo />} />
