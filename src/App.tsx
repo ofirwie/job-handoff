@@ -19,8 +19,8 @@ import TaskFocusView from "./pages/TaskFocusView";
 import EmployeeDashboardDemo from "./pages/EmployeeDashboardDemo";
 import ManagerDashboardDemo from "./pages/ManagerDashboardDemo";
 import AdminDashboardDemo from "./pages/AdminDashboardDemo";
-import MondayHandoverOverview from "./components/MondayHandoverOverview";
 import NavigationDemo from "./components/NavigationDemo";
+import MondayHome from "./pages/MondayHome";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -77,7 +77,7 @@ const App = () => {
             <Routes>
               {/* Monday.com styled main routes */}
               <Route path="/" element={<NavigationDemo />} />
-              <Route path="/main" element={<MondayHandoverOverview userRole={{ type: 'employee', email: 'demo@albaad.com', name: 'משתמש דמו' }} />} />
+              <Route path="/main" element={<MondayHome />} />
               <Route path="/handover/:handoverId" element={<HandoverWorkspace />} />
               <Route path="/handover/:handoverId/task/:taskIndex" element={<TaskFocusView />} />
               
