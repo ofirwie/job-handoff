@@ -29,7 +29,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
 });
 
 // Export types for better TypeScript support
-export type { Database } from './database.types';
+export type { Database } from '../types/database.types';
 
 // Utility function to handle Supabase errors consistently
 export const handleSupabaseError = (error: any) => {

@@ -93,7 +93,7 @@ export const KPICards = () => {
       title: "Active Handovers",
       value: stats.active || 0,
       change: getChangeText(stats.active, 'active'),
-      changeType: getChangeType(getChangeText(stats.active, 'active')),
+      changeType: getChangeType(getChangeText(stats.active, 'active')) as "positive" | "negative" | "neutral",
       icon: <Users className="h-4 w-4" />,
       description: "Currently in progress"
     },
@@ -101,7 +101,7 @@ export const KPICards = () => {
       title: "Completion Rate",
       value: `${stats.completion_rate || 0}%`,
       change: getChangeText(stats.completion_rate, 'completion'),
-      changeType: getChangeType(getChangeText(stats.completion_rate, 'completion')),
+      changeType: getChangeType(getChangeText(stats.completion_rate, 'completion')) as "positive" | "negative" | "neutral",
       icon: <CheckCircle className="h-4 w-4" />,
       description: "On-time completions"
     },
@@ -109,7 +109,7 @@ export const KPICards = () => {
       title: "Overdue Tasks",
       value: stats.overdue || 0,
       change: getChangeText(stats.overdue, 'overdue'),
-      changeType: stats.overdue === 0 ? 'positive' : 'negative',
+      changeType: (stats.overdue === 0 ? 'positive' : 'negative') as "positive" | "negative" | "neutral",
       icon: <AlertTriangle className="h-4 w-4" />,
       description: "Requiring attention"
     },
@@ -117,7 +117,7 @@ export const KPICards = () => {
       title: "Avg. Completion Time",
       value: stats.avg_completion_days > 0 ? `${stats.avg_completion_days} days` : '--',
       change: getChangeText(stats.avg_completion_days, 'time'),
-      changeType: getChangeType(getChangeText(stats.avg_completion_days, 'time')),
+      changeType: getChangeType(getChangeText(stats.avg_completion_days, 'time')) as "positive" | "negative" | "neutral",
       icon: <Clock className="h-4 w-4" />,
       description: "Process efficiency"
     }

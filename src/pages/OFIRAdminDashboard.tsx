@@ -57,7 +57,7 @@ const OFIRAdminDashboard: React.FC = () => {
           </div>
         </div>
         
-        <AdminDashboard />
+        <AdminDashboard adminEmail="admin@company.com" />
       </div>
     </div>
   );

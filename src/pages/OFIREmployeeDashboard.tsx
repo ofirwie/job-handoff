@@ -6,7 +6,7 @@ const OFIREmployeeDashboard: React.FC = () => {
   return (
     <div className="ofir-dashboard">
       <OFIRHeader userName="יוסי כהן" userRole="employee" />
-      <EmployeeDashboard />
+      <EmployeeDashboard employeeEmail="employee@company.com" />
     </div>
   );
 };
