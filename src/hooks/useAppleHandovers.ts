@@ -60,7 +60,7 @@ export function useHandovers() {
 
     // Calculate priority based on due date and status
     const calculatePriority = (dueDate: string, status: string): 'high' | 'medium' | 'low' => {
-      if (status === 'completed' && status !== 'approved') return 'high'; // Needs review
+      if (status === 'completed') return 'medium'; // Completed items
       
       const timeLeft = getTimeLeft(dueDate);
       if (timeLeft === 'Overdue' || timeLeft === 'Due today') return 'high';

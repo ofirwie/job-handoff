@@ -182,6 +182,7 @@ const OFIREmployeeDashboard: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <MondayLayout activeTab="employee">
       <MondayHeader
         title="החפיפה שלי"
@@ -220,6 +221,12 @@ const OFIREmployeeDashboard: React.FC = () => {
       
       <MondayTable data={tasks} columns={columns} />
     </MondayLayout>
+=======
+    <div className="ofir-dashboard">
+      <OFIRHeader userName="יוסי כהן" userRole="employee" />
+      <EmployeeDashboard employeeEmail="employee@company.com" />
+    </div>
+>>>>>>> 47956d2e5208f30974405f487cb58b8cd0707619
   );
 };
 

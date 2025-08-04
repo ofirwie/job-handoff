@@ -293,6 +293,7 @@ export class TemplateService {
         department: options?.department || originalTemplate.department,
         is_department_standard: options?.is_department_standard || false,
         status: 'draft' as const,
+        template_version: 1,
         parent_template_id: id
       };
 

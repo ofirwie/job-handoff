@@ -243,6 +243,11 @@ const OFIRAdminDashboard: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+        
+        <AdminDashboard adminEmail="admin@company.com" />
+>>>>>>> 47956d2e5208f30974405f487cb58b8cd0707619
       </div>
       
       <MondayTable 
