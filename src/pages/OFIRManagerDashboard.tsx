@@ -1,13 +1,18 @@
 import React from 'react';
-import OFIRHeader from '@/components/OFIRHeader';
-import ManagerDashboard from '@/components/ManagerDashboard';
+import ManagerDashboardErrorBoundary from '@/components/ManagerDashboardErrorBoundary';
+import ManagerDashboardFigmaActual from '@/components/ManagerDashboardFigmaActual';
 
 const OFIRManagerDashboard: React.FC = () => {
+  console.log('🚀 OFIRManagerDashboard component rendering - YOUR ACTUAL FIGMA DESIGN');
+  
   return (
-    <div className="ofir-dashboard">
-      <OFIRHeader userName="מנהל הצוות" userRole="manager" />
-      <ManagerDashboard />
-    </div>
+    <ManagerDashboardErrorBoundary>
+      <ManagerDashboardFigmaActual 
+        managerEmail="manager@example.com"
+        managerName="Michael Cohen"
+        department="Product Engineering"
+      />
+    </ManagerDashboardErrorBoundary>
   );
 };
 

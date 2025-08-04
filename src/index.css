@@ -1,6 +1,9 @@
 /* Smart Handover System Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* Import Figma extracted design tokens */
+@import './styles/figma-extracted-all.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

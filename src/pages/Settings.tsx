@@ -26,6 +26,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 import GoogleSyncDashboard from '@/components/GoogleSyncDashboard';
+import FigmaIntegration from '@/components/FigmaIntegration';
 
 interface SetupStep {
   id: string;
@@ -228,8 +229,9 @@ const Settings = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="google">Google Integration</TabsTrigger>
+            <TabsTrigger value="figma">Figma Design</TabsTrigger>
             <TabsTrigger value="monitoring">Monitoring</TabsTrigger>
             <TabsTrigger value="general">General</TabsTrigger>
           </TabsList>
@@ -465,6 +467,20 @@ const Settings = () => {
                 </Alert>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Figma Integration Tab */}
+          <TabsContent value="figma" className="space-y-6">
+            <FigmaIntegration 
+              onTokensGenerated={(tokens) => {
+                console.log('Design tokens generated:', tokens);
+                // You can add additional logic here to update the UI or sync with other systems
+              }}
+              onComponentsExported={(components) => {
+                console.log('Components exported:', components);
+                // Handle exported components - maybe save to a components library
+              }}
+            />
           </TabsContent>
 
           {/* Monitoring Tab */}

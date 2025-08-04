@@ -449,7 +449,10 @@ export interface Database {
           start_date: string | null;
           due_date: string;
           completed_date: string | null;
-          status: 'created' | 'in_progress' | 'completed' | 'cancelled';
+          status: 'created' | 'in_progress' | 'completed' | 'cancelled' | 'overdue' | 'pending_review' | 'approved' | 'rejected';
+          is_overdue: boolean;
+          time_category: 'overdue' | 'today' | 'this_week' | 'next_week' | 'future' | 'completed';
+          priority: number;
           notes: string | null;
           manager_edits: Json;
           learning_feedback: Json;
@@ -469,7 +472,8 @@ export interface Database {
           start_date?: string | null;
           due_date: string;
           completed_date?: string | null;
-          status?: 'created' | 'in_progress' | 'completed' | 'cancelled';
+          status?: 'created' | 'in_progress' | 'completed' | 'cancelled' | 'overdue' | 'pending_review' | 'approved' | 'rejected';
+          priority?: number;
           notes?: string | null;
           manager_edits?: Json;
           learning_feedback?: Json;
@@ -489,7 +493,8 @@ export interface Database {
           start_date?: string | null;
           due_date?: string;
           completed_date?: string | null;
-          status?: 'created' | 'in_progress' | 'completed' | 'cancelled';
+          status?: 'created' | 'in_progress' | 'completed' | 'cancelled' | 'overdue' | 'pending_review' | 'approved' | 'rejected';
+          priority?: number;
           notes?: string | null;
           manager_edits?: Json;
           learning_feedback?: Json;

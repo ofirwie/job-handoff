@@ -1,0 +1,237 @@
+/* EXACT CSS FROM FIGMA SPECS */
+/* Based on figma-manager-dashboard-specs.json */
+
+.figma-exact-dashboard {
+  width: 1440px;
+  height: 900px;
+  background: #fafbfc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar from Figma */
+.figma-sidebar {
+  position: absolute;
+  left: 60px;
+  top: 100px;
+  width: 236px;
+  height: 900px;
+  background: #42526e;
+}
+
+.figma-sidebar-logo {
+  padding: 30px 20px;
+  border-bottom: 1px solid #33334d;
+}
+
+.figma-sidebar-logo h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.figma-sidebar-profile {
+  padding: 20px;
+  border-bottom: 1px solid #33334d;
+}
+
+.figma-sidebar-nav {
+  padding: 20px 0;
+}
+
+.figma-sidebar-nav-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.figma-sidebar-nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.figma-sidebar-nav-item.active {
+  background: #2d7ef8;
+}
+
+.figma-sidebar-nav-item span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.figma-sidebar-nav-item.active span {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Main content area */
+.figma-main-content {
+  position: absolute;
+  left: 306px;
+  top: 130px;
+  right: 0;
+  bottom: 0;
+}
+
+.figma-page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #42526e;
+  margin: 0 0 24px 0;
+}
+
+/* Filters bar */
+.figma-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.figma-filter-dropdown {
+  background: #fafafc;
+  border: 1px solid #ccd1db;
+  border-radius: 4px;
+  padding: 8px 12px;
+  min-width: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.figma-filter-dropdown span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #42526e;
+}
+
+.figma-search-box {
+  flex: 1;
+  max-width: 300px;
+  background: #fafafc;
+  border: 1px solid #ccd1db;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.figma-search-box input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 14px;
+  color: #42526e;
+  width: 100%;
+}
+
+/* Table styles - EXACT from Figma */
+.figma-table {
+  width: 1148px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.figma-table thead {
+  display: none; /* Headers are category rows in Figma design */
+}
+
+.figma-category-row td {
+  padding: 16px 0;
+  background: transparent !important;
+  border: none !important;
+}
+
+.figma-category-header {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.figma-category-overdue { color: #d42e2e; }
+.figma-category-today { color: #2d7ef8; }
+.figma-category-this-week { color: #22c55e; }
+.figma-category-next-week { color: #6b7280; }
+
+/* Data rows - matching Figma exactly */
+.figma-table tbody tr.figma-data-row {
+  height: 53px;
+  background: #ffffff;
+  position: relative;
+}
+
+.figma-table tbody tr.figma-data-row td {
+  padding: 0 17px;
+  font-size: 14px;
+  color: #42526e;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  vertical-align: middle;
+}
+
+.figma-table tbody tr.figma-data-row td:last-child {
+  border-right: none;
+}
+
+/* Column widths from Figma */
+.figma-table tbody tr.figma-data-row td:nth-child(1) { 
+  width: 180px;
+  font-weight: 500;
+}
+
+.figma-table tbody tr.figma-data-row td:nth-child(2) { 
+  width: 186px;
+  font-weight: 400;
+}
+
+.figma-table tbody tr.figma-data-row td:nth-child(3) { 
+  width: 186px;
+  font-weight: 500;
+}
+
+.figma-table tbody tr.figma-data-row td:nth-child(4) { 
+  width: 295px;
+  font-weight: 400;
+}
+
+.figma-table tbody tr.figma-data-row td:nth-child(5) { 
+  width: 274px;
+  padding: 9px 0;
+}
+
+/* Progress text colors */
+.progress-overdue { color: #cc7821 !important; }
+.progress-today { color: #22c55e !important; }
+.progress-normal { color: #6b7280 !important; }
+.progress-completed { color: #22c55e !important; }
+
+/* Status badges - full width like in Figma */
+.figma-status-badge {
+  display: block;
+  width: 264px;
+  height: 35px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.figma-status-overdue { background: #d42e2e; }
+.figma-status-in-progress { background: #2d7ef8; }
+.figma-status-completed { background: #22c55e; }
+.figma-status-pending-review { background: #f59e0b; }
+.figma-status-created { background: #6b7280; }
+.figma-status-cancelled { background: #6b7280; }
+
+/* Ensure Inter font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

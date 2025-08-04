@@ -4,8 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
-import "./styles/monday-design-system.css";
+import "./styles/monday-professional.css";
 import "./styles/ofir-ai-design-system.css";
+import "./styles/figma-extracted-tokens.css";
 import Index from "./pages/Index";
 import SafeIndex from "./pages/SafeIndex";
 import Handovers from "./pages/Handovers";
@@ -19,13 +20,26 @@ import HandoverWorkspace from "./pages/HandoverWorkspace";
 import TaskFocusView from "./pages/TaskFocusView";
 import EmployeeDashboardDemo from "./pages/EmployeeDashboardDemo";
 import ManagerDashboardDemo from "./pages/ManagerDashboardDemo";
+import ManagerDashboardFigmaDemo from "./pages/ManagerDashboardFigmaDemo";
 import AdminDashboardDemo from "./pages/AdminDashboardDemo";
+import FigmaIntegrationDemo from "./pages/FigmaIntegrationDemo";
 import NavigationDemo from "./components/NavigationDemo";
 import MondayHome from "./pages/MondayHome";
 import OFIRHome from "./pages/OFIRHome";
 import OFIREmployeeDashboard from "./pages/OFIREmployeeDashboard";
 import OFIRManagerDashboard from "./pages/OFIRManagerDashboard";
 import OFIRAdminDashboard from "./pages/OFIRAdminDashboard";
+import EnhancedManagerDashboard from "./pages/EnhancedManagerDashboard";
+import ManagerDashboardTest from "./pages/ManagerDashboardTest";
+import FigmaManagerDashboard from "./pages/FigmaManagerDashboard";
+import FigmaExactDashboard from "./pages/FigmaExactDashboard";
+import FigmaTableDashboard from "./pages/FigmaTableDashboard";
+import SimpleLogin from "./pages/SimpleLogin";
+import DebugAuth from "./pages/DebugAuth";
+import CreateTestUser from "./pages/CreateTestUser";
+import FigmaManagerDashboardHTML from "./components/FigmaManagerDashboardHTML";
+import ManagerDashboardFigma from "./components/ManagerDashboardFigma";
+import ManagerDashboardReal from "./components/ManagerDashboardReal";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertTriangle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -88,17 +102,30 @@ const App = () => {
               
               {/* Role-based dashboards - OFIR AI Style */}
               <Route path="/employee" element={<OFIREmployeeDashboard />} />
-              <Route path="/manager" element={<OFIRManagerDashboard />} />
+              <Route path="/manager" element={<FigmaTableDashboard />} />
+              <Route path="/manager-enhanced" element={<EnhancedManagerDashboard />} />
+              <Route path="/manager-test" element={<ManagerDashboardTest />} />
+              <Route path="/manager-figma" element={<FigmaManagerDashboard />} />
+              <Route path="/manager-exact" element={<FigmaExactDashboard />} />
+              <Route path="/manager-table" element={<FigmaTableDashboard />} />
+              <Route path="/manager-html" element={<FigmaManagerDashboardHTML />} />
+              <Route path="/manager-figma-real" element={<ManagerDashboardFigma />} />
+              <Route path="/manager-real" element={<ManagerDashboardReal />} />
+              <Route path="/login" element={<SimpleLogin />} />
+              <Route path="/debug-auth" element={<DebugAuth />} />
+              <Route path="/create-user" element={<CreateTestUser />} />
               <Route path="/admin" element={<OFIRAdminDashboard />} />
               
               {/* Legacy role-based dashboards */}
               <Route path="/employee-demo" element={<EmployeeDashboardDemo />} />
               <Route path="/manager-demo" element={<ManagerDashboardDemo />} />
+              <Route path="/manager-figma" element={<ManagerDashboardFigmaDemo />} />
               <Route path="/admin-demo" element={<AdminDashboardDemo />} />
               
               {/* Settings and utilities */}
               <Route path="/demo" element={<NavigationDemo />} />
               <Route path="/navigation-demo" element={<NavigationDemo />} />
+              <Route path="/figma" element={<FigmaIntegrationDemo />} />
               <Route path="/settings" element={<Settings />} />
               
               {/* Legacy routes for comparison */}

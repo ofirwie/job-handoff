@@ -1,0 +1,2160 @@
+/* Figma Design Tokens - Extracted 2025-08-04T07:16:53.192Z */
+
+:root {
+  /* Colors */
+  --color-document-handoff-ofir-ai-design-system-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-main-title-fill-0: #1a1a33;
+  --color-document-handoff-ofir-ai-design-system-color-palette-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-color-palette-primary-blue-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-color-palette-secondary-purple-fill-0: #7d3bed;
+  --color-document-handoff-ofir-ai-design-system-color-palette-success-green-fill-0: #0fba82;
+  --color-document-handoff-ofir-ai-design-system-color-palette-warning-orange-fill-0: #f59e0a;
+  --color-document-handoff-ofir-ai-design-system-color-palette-danger-red-fill-0: #f04545;
+  --color-document-handoff-ofir-ai-design-system-button-styles-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-primary-button-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-button-styles-primary-button-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-secondary-button-fill-0: #f2f2f7;
+  --color-document-handoff-ofir-ai-design-system-button-styles-secondary-button-button-text-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-button-styles-success-button-fill-0: #0fba82;
+  --color-document-handoff-ofir-ai-design-system-button-styles-success-button-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-warning-button-fill-0: #f59e0a;
+  --color-document-handoff-ofir-ai-design-system-button-styles-warning-button-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-danger-button-fill-0: #f04545;
+  --color-document-handoff-ofir-ai-design-system-button-styles-danger-button-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-ghost-button-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-button-styles-ghost-button-button-text-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-header-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-fill-0: #0fba82;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-status-text-fill-0: #0fba82;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-header-due-date-fill-0: #8c94a1;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-task-title-fill-0: #1a1a33;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-task-description-fill-0: #8c94a1;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-footer-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-footer-assignee-avatar-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-fill-0: #f59e0a;
+  --color-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-priority-text-fill-0: #f59e0a;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-logo-section-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-logo-section-logo-fill-0: #2663eb;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-logo-section-company-name-fill-0: #1a1a33;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-search-box-fill-0: #fafafc;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-search-box-search-placeholder-fill-0: #8c94a1;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-user-menu-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-user-menu-notifications-fill-0: #f2f2f2;
+  --color-document-handoff-ofir-ai-design-system-navigation-header-user-menu-user-avatar-fill-0: #7d3bed;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-fill-0: #fafafc;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-dashboard-title-fill-0: #1a1a33;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-label-fill-0: #8c94a1;
+  --color-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-value-fill-0: #1a1a33;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-fill-0: #fafbfc;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-main-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-color-palette-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-fill-0: #00d4aa;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-fill-0: #ff6b47;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-status-colors-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-success-green-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-success-green-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-fill-0: #ffb020;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-error-red-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-error-red-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-grayscale-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-fill-0: #fafbfc;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-fill-0: #f4f5f7;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-fill-0: #e4e6ea;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-label-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-gray-300-fill-0: #c1c7d0;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-buttons-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-primary-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-fill-0: #f4f5f7;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-secondary-button-text-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-success-button-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-success-button-success-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-fill-0: #ffb020;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-warning-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-danger-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-ghost-button-text-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-task-card-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-task-card-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-card-title-fill-0: #172b4d;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-description-fill-0: #758195;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-task-card-status-badge-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-job-handoff---complete-system-design-system-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-fill-0: #fafbfc;
+  --color-document-handoff-ofir-ai-complete-design-system-color-palette-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-primary-blue--2d7ef8-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-secondary-green--00d4aa-fill-0: #00d4aa;
+  --color-document-handoff-ofir-ai-complete-design-system-accent-orange--ff6b47-fill-0: #ff6b47;
+  --color-document-handoff-ofir-ai-complete-design-system-success-green--00c896-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-complete-design-system-warning-yellow--ffb020-fill-0: #ffb020;
+  --color-document-handoff-ofir-ai-complete-design-system-error-red--ff5a5f-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-complete-design-system-grayscale-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-50--fafbfc-fill-0: #fafbfc;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-100--f4f5f7-fill-0: #f4f5f7;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-200--e4e6ea-fill-0: #e4e6ea;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-300--c1c7d0-fill-0: #c1c7d0;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-400--758195-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-500--42526e-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-gray-600--172b4d-fill-0: #172b4d;
+  --color-document-handoff-ofir-ai-complete-design-system-button-components-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-primary-button-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-primary-button-primary-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-secondary-button-fill-0: #f4f5f7;
+  --color-document-handoff-ofir-ai-complete-design-system-secondary-button-secondary-button-text-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-success-button-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-complete-design-system-success-button-success-button-text-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-warning-button-fill-0: #ffb020;
+  --color-document-handoff-ofir-ai-complete-design-system-warning-button-warning-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-danger-button-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-complete-design-system-danger-button-danger-button-text-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-ghost-button-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-ghost-button-ghost-button-text-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-task-title-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-status-text-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-task-description-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-task-card-due-date-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-logo-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-search-placeholder-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-user-initials-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-dashboard-layout-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-kpi-cards-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-label-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-number-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-label-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-number-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-complete-design-system-overdue-kpi-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-label-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-number-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-complete-design-system-team-members-kpi-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-label-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-number-fill-0: #00d4aa;
+  --color-document-handoff-ofir-ai-complete-design-system-task-sections-title-fill-0: #000000;
+  --color-document-handoff-ofir-ai-complete-design-system-overdue-section-header-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-complete-design-system-overdue-section-header-overdue-section-text-fill-0: #ff5a5f;
+  --color-document-handoff-ofir-ai-complete-design-system-today-section-header-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-today-section-header-today-section-text-fill-0: #2d7ef8;
+  --color-document-handoff-ofir-ai-complete-design-system-this-week-section-header-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-complete-design-system-this-week-section-header-this-week-section-text-fill-0: #00c896;
+  --color-document-handoff-ofir-ai-complete-design-system-next-week-section-header-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-next-week-section-header-next-week-section-text-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-task-title-1-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-due-date-1-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-task-title-2-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-due-date-2-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-task-title-3-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-due-date-3-fill-0: #758195;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-fill-0: #ffffff;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-task-title-4-fill-0: #42526e;
+  --color-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-due-date-4-fill-0: #758195;
+  --color-document-handoff-1--login-screen-fill-0: #fafbfc;
+  --color-document-handoff-1--login-screen-login-card-fill-0: #ffffff;
+  --color-document-handoff-1--login-screen-login-card-company-logo-fill-0: #2d7ef8;
+  --color-document-handoff-1--login-screen-login-card-login-title-fill-0: #42526e;
+  --color-document-handoff-1--login-screen-login-card-login-subtitle-fill-0: #758195;
+  --color-document-handoff-1--login-screen-login-card-email-field-fill-0: #ffffff;
+  --color-document-handoff-1--login-screen-login-card-email-field-email-placeholder-fill-0: #758195;
+  --color-document-handoff-1--login-screen-login-card-password-field-fill-0: #ffffff;
+  --color-document-handoff-1--login-screen-login-card-password-field-password-placeholder-fill-0: #758195;
+  --color-document-handoff-1--login-screen-login-card-remember-checkbox-fill-0: #d9d9d9;
+  --color-document-handoff-1--login-screen-login-card-remember-text-fill-0: #42526e;
+  --color-document-handoff-1--login-screen-login-card-forgot-password-fill-0: #2d7ef8;
+  --color-document-handoff-1--login-screen-login-card-login-button-fill-0: #2d7ef8;
+  --color-document-handoff-1--login-screen-login-card-login-button-login-button-text-fill-0: #ffffff;
+  --color-document-handoff-4--task-detail-view-fill-0: #fafbfc;
+  --color-document-handoff-4--task-detail-view-task-detail-title-fill-0: #42526e;
+  --color-document-handoff-4--task-detail-view-back-button-fill-0: #758195;
+  --color-document-handoff-4--task-detail-view-back-button-back-button-text-fill-0: #ffffff;
+  --color-document-handoff-4--task-detail-view-task-detail-main-card-fill-0: #ffffff;
+  --color-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-main-title-fill-0: #42526e;
+  --color-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-description-fill-0: #758195;
+  --color-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-meta-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-fill-0: #fafbfc;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-sidebar-logo-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-fill-0: #2d7ef8;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-team-fill-0: #cccccc;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-assign-fill-0: #cccccc;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-reports-fill-0: #cccccc;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-approvals-fill-0: #cccccc;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-fill-0: #33334d;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-fill-0: #ff6b47;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-manager-initials-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-name-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-role-fill-0: #cccccc;
+  --color-document-handoff-3--manager-dashboard-team-handovers-title-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-test-like-yours-fill-0: #000000;
+  --color-document-handoff-3--manager-dashboard-department-filter-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-department-filter-department-text-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-role-filter-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-role-filter-role-text-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-year-filter-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-year-filter-year-text-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-month-filter-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-month-filter-month-text-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-search-box-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-search-box-search-placeholder-fill-0: #999999;
+  --color-document-handoff-3--manager-dashboard-hide-completed-checkbox-fill-0: #fafafc;
+  --color-document-handoff-3--manager-dashboard-hide-completed-checkbox-hide-completed-text-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-overdue-category-fill-0: #d42e2e;
+  --color-document-handoff-3--manager-dashboard-today-category-fill-0: #2d7ef8;
+  --color-document-handoff-3--manager-dashboard-today-row-2-background-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-today-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-today-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-today-2-fill-0: #22c55e;
+  --color-document-handoff-3--manager-dashboard-date-today-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-today-2-fill-0: #22c55e;
+  --color-document-handoff-3--manager-dashboard-divider-today-2-1-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-today-2-2-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-today-2-3-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-today-2-4-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-status-text-today-2-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-today-3-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-today-3-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-today-3-fill-0: #22c55e;
+  --color-document-handoff-3--manager-dashboard-date-today-3-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-today-3-fill-0: #22c55e;
+  --color-document-handoff-3--manager-dashboard-status-text-today-3-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-this-week-category-fill-0: #22c55e;
+  --color-document-handoff-3--manager-dashboard-divider-week-1-2-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-next-week-category-fill-0: #6b7280;
+  --color-document-handoff-3--manager-dashboard-next-row-1-background-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-next-1-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-next-1-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-next-1-fill-0: #6b7280;
+  --color-document-handoff-3--manager-dashboard-date-next-1-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-next-1-fill-0: #6b7280;
+  --color-document-handoff-3--manager-dashboard-status-text-next-1-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-next-row-2-background-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-next-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-next-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-next-2-fill-0: #6b7280;
+  --color-document-handoff-3--manager-dashboard-date-next-2-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-next-2-fill-0: #6b7280;
+  --color-document-handoff-3--manager-dashboard-status-text-next-2-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-divider-next-1-1-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-1-2-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-1-3-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-1-4-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-2-1-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-2-2-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-2-3-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-next-2-4-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-overdue-row-background-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-overdue-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-overdue-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-overdue-fill-0: #cc7821;
+  --color-document-handoff-3--manager-dashboard-date-overdue-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-overdue-fill-0: #d42e2e;
+  --color-document-handoff-3--manager-dashboard-divider-overdue-1-1-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-overdue-1-2-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-overdue-1-3-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-divider-overdue-1-4-fill-0: #e6e6e6;
+  --color-document-handoff-3--manager-dashboard-status-text-overdue-correct-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-today-4-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-today-4-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-today-4-fill-0: #2d7ef8;
+  --color-document-handoff-3--manager-dashboard-date-today-4-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-today-4-fill-0: #2d7ef8;
+  --color-document-handoff-3--manager-dashboard-status-text-today-4-fill-0: #ffffff;
+  --color-document-handoff-3--manager-dashboard-position-today-5-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-handover-team-today-5-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-progress-today-5-fill-0: #cc7821;
+  --color-document-handoff-3--manager-dashboard-date-today-5-fill-0: #42526e;
+  --color-document-handoff-3--manager-dashboard-status-badge-today-5-fill-0: #f59e0b;
+  --color-document-handoff-3--manager-dashboard-status-text-today-5-fill-0: #ffffff;
+  --color-document-handoff-simple-test-page-fill-0: #ffffff;
+  --color-document-handoff-2--employee-dashboard-fill-0: #fafbfc;
+  --color-document-handoff-4-my-handsover-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-manager-sidebar-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-sidebar-logo-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-fill-0: #2d7ef8;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-team-fill-0: #cccccc;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-assign-fill-0: #cccccc;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-reports-fill-0: #cccccc;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-approvals-fill-0: #cccccc;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-profile-fill-0: #33334d;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-fill-0: #ff6b47;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-manager-initials-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-name-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-role-fill-0: #cccccc;
+  --color-document-handoff-4-my-handsover-team-handovers-title-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-test-like-yours-fill-0: #000000;
+  --color-document-handoff-4-my-handsover-department-filter-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-department-filter-department-text-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-role-filter-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-role-filter-role-text-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-year-filter-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-year-filter-year-text-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-month-filter-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-month-filter-month-text-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-search-box-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-search-box-search-placeholder-fill-0: #999999;
+  --color-document-handoff-4-my-handsover-hide-completed-checkbox-fill-0: #fafafc;
+  --color-document-handoff-4-my-handsover-hide-completed-checkbox-hide-completed-text-fill-0: #42526e;
+  --color-document-handoff-4-my-handsover-overdue-column-fill-0: #fcfcfc;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-fill-0: #fff2f2;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-high-tag-1-text-fill-0: #db2626;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-fill-0: #fff2f2;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-security-tag-1-text-fill-0: #991c1c;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-fill-0: #fff2f2;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-high-tag-2-text-fill-0: #dc2626;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-fill-0: #f0fdf4;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-sales-tag-2-text-fill-0: #16a34a;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-header-fill-0: #e3473b;
+  --color-document-handoff-4-my-handsover-overdue-column-overdue-header-overdue-header-text-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-todo-column-fill-0: #fcfcfc;
+  --color-document-handoff-4-my-handsover-todo-column-todo-header-fill-0: #a178d9;
+  --color-document-handoff-4-my-handsover-todo-column-todo-header-todo-header-text-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-fill-0: #fffaeb;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-medium-tag-todo-1-text-fill-0: #d97526;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-fill-0: #f0f5ff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-systems-tag-todo-1-text-fill-0: #266326;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-fill-0: #fffbeb;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-medium-tag-todo-2-text-fill-0: #d97606;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-fill-0: #fefce8;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-training-tag-todo-2-text-fill-0: #a16107;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-fill-0: #f0f9ff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-low-tag-todo-3-text-fill-0: #2663eb;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-fill-0: #faf5ff;
+  --color-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-documentation-tag-todo-3-text-fill-0: #7c2d12;
+  --color-document-handoff-4-my-handsover-progress-column-fill-0: #fcfcfc;
+  --color-document-handoff-4-my-handsover-progress-column-progress-header-fill-0: #4294de;
+  --color-document-handoff-4-my-handsover-progress-column-progress-header-progress-header-text-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-fill-0: #fff2f2;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-high-tag-progress-1-text-fill-0: #dc2626;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-fill-0: #fefce8;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-training-tag-progress-1-text-fill-0: #a16107;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-fill-0: #fffbeb;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-medium-tag-progress-2-text-fill-0: #d97606;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-fill-0: #f0f9ff;
+  --color-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-review-tag-progress-2-text-fill-0: #0383c7;
+  --color-document-handoff-4-my-handsover-completed-column-fill-0: #fcfcfc;
+  --color-document-handoff-4-my-handsover-completed-column-completed-header-fill-0: #29c75e;
+  --color-document-handoff-4-my-handsover-completed-column-completed-header-completed-header-text-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-fill-0: #f0f9ff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-low-tag-completed-1-text-fill-0: #2663eb;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-fill-0: #f9faf9;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-admin-tag-completed-1-text-fill-0: #6b7280;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-fill-0: #fff2f2;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-high-tag-completed-2-text-fill-0: #dc2626;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-fill-0: #f3e8ff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-legal-tag-completed-2-text-fill-0: #7c2d12;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-fill-0: #fffbeb;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-medium-tag-completed-3-text-fill-0: #d97606;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-fill-0: #ecfdf4;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-social-tag-completed-3-text-fill-0: #389669;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-fill-0: #ffffff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-title-fill-0: #334059;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-description-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-date-fill-0: #6b7380;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-fill-0: #fffbeb;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-medium-tag-completed-4-text-fill-0: #d97606;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-fill-0: #eff6ff;
+  --color-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-it-tag-completed-4-text-fill-0: #1d54e0;
+
+  /* Typography */
+  --font-document-handoff-ofir-ai-design-system-main-title-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-main-title-size: 48px;
+  --font-document-handoff-ofir-ai-design-system-main-title-weight: 700;
+  --font-document-handoff-ofir-ai-design-system-main-title-line-height: 58.09090805053711px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-primary-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-primary-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-primary-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-primary-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-secondary-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-secondary-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-secondary-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-secondary-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-success-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-success-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-success-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-success-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-warning-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-warning-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-warning-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-warning-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-danger-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-danger-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-danger-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-danger-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-ghost-button-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-button-styles-ghost-button-button-text-size: 16px;
+  --font-document-handoff-ofir-ai-design-system-button-styles-ghost-button-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-button-styles-ghost-button-button-text-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-status-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-status-text-size: 12px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-status-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-status-text-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-due-date-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-due-date-size: 12px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-due-date-weight: 400;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-header-due-date-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-title-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-title-size: 18px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-title-weight: 700;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-title-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-description-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-description-size: 14px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-description-weight: 400;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-task-description-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-priority-text-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-priority-text-size: 12px;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-priority-text-weight: 600;
+  --font-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-priority-text-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-logo-section-company-name-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-logo-section-company-name-size: 20px;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-logo-section-company-name-weight: 700;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-logo-section-company-name-line-height: 24.204544067382812px;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-search-box-search-placeholder-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-search-box-search-placeholder-size: 14px;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-search-box-search-placeholder-weight: 400;
+  --font-document-handoff-ofir-ai-design-system-navigation-header-search-box-search-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-dashboard-title-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-dashboard-title-size: 32px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-dashboard-title-weight: 700;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-dashboard-title-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-label-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-label-size: 14px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-label-weight: 500;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-label-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-value-family: Inter;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-value-size: 36px;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-value-weight: 700;
+  --font-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-kpi-value-line-height: 43.568180084228516px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-main-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-main-title-size: 48px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-main-title-weight: 700;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-main-title-line-height: 58.09090805053711px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-color-palette-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-color-palette-title-size: 32px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-color-palette-title-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-color-palette-title-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-blue-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-green-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-accent-orange-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-status-colors-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-status-colors-title-size: 24px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-status-colors-title-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-status-colors-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-green-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-green-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-green-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-green-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-yellow-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-error-red-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-error-red-label-size: 12px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-error-red-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-error-red-label-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-grayscale-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-grayscale-title-size: 24px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-grayscale-title-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-grayscale-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-label-size: 10px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-50-label-line-height: 12.102272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-label-size: 10px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-100-label-line-height: 12.102272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-label-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-label-size: 10px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-label-weight: 500;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-gray-200-label-line-height: 12.102272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-buttons-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-buttons-title-size: 32px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-buttons-title-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-buttons-title-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-primary-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-primary-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-primary-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-primary-button-primary-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-secondary-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-secondary-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-secondary-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-secondary-button-secondary-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-button-success-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-button-success-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-button-success-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-success-button-success-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-warning-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-warning-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-warning-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-warning-button-warning-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-danger-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-danger-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-danger-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-danger-button-danger-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-ghost-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-ghost-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-ghost-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-ghost-button-ghost-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-title-size: 32px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-title-weight: 600;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-title-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-card-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-card-title-size: 18px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-card-title-weight: 700;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-card-title-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-description-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-description-size: 14px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-description-weight: 400;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-task-card-task-description-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-design-system-title-family: Inter;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-design-system-title-size: 32px;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-design-system-title-weight: 700;
+  --font-document-handoff-ofir-ai-job-handoff---complete-system-design-system-title-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-complete-design-system-color-palette-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-color-palette-title-size: 24px;
+  --font-document-handoff-ofir-ai-complete-design-system-color-palette-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-color-palette-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-complete-design-system-grayscale-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-grayscale-title-size: 18px;
+  --font-document-handoff-ofir-ai-complete-design-system-grayscale-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-grayscale-title-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-complete-design-system-button-components-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-button-components-title-size: 24px;
+  --font-document-handoff-ofir-ai-complete-design-system-button-components-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-button-components-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-complete-design-system-primary-button-primary-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-primary-button-primary-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-primary-button-primary-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-primary-button-primary-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-secondary-button-secondary-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-secondary-button-secondary-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-secondary-button-secondary-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-secondary-button-secondary-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-success-button-success-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-success-button-success-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-success-button-success-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-success-button-success-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-warning-button-warning-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-warning-button-warning-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-warning-button-warning-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-warning-button-warning-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-danger-button-danger-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-danger-button-danger-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-danger-button-danger-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-danger-button-danger-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-ghost-button-ghost-button-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-ghost-button-ghost-button-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-ghost-button-ghost-button-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-ghost-button-ghost-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-title-size: 24px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-title-size: 16px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-title-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-title-line-height: 19.363636016845703px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-status-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-status-text-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-status-text-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-status-badge-status-text-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-description-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-description-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-description-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-task-description-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-due-date-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-due-date-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-due-date-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-task-card-due-date-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-title-size: 24px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-logo-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-logo-size: 18px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-logo-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-logo-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-search-placeholder-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-search-placeholder-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-search-placeholder-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar-search-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-user-initials-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-user-initials-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-user-initials-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu-user-initials-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-dashboard-layout-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-dashboard-layout-title-size: 24px;
+  --font-document-handoff-ofir-ai-complete-design-system-dashboard-layout-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-dashboard-layout-title-line-height: 29.045454025268555px;
+  --font-document-handoff-ofir-ai-complete-design-system-kpi-cards-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-kpi-cards-title-size: 18px;
+  --font-document-handoff-ofir-ai-complete-design-system-kpi-cards-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-kpi-cards-title-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-label-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-label-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-label-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-label-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-number-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-number-size: 32px;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-number-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-active-tasks-kpi-active-tasks-number-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-label-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-label-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-label-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-label-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-number-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-number-size: 32px;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-number-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-completed-today-kpi-completed-today-number-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-label-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-label-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-label-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-label-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-number-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-number-size: 32px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-number-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-kpi-overdue-number-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-label-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-label-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-label-weight: 500;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-label-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-number-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-number-size: 32px;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-number-weight: 700;
+  --font-document-handoff-ofir-ai-complete-design-system-team-members-kpi-team-members-number-line-height: 38.727272033691406px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-sections-title-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-task-sections-title-size: 18px;
+  --font-document-handoff-ofir-ai-complete-design-system-task-sections-title-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-task-sections-title-line-height: 21.784090042114258px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-section-header-overdue-section-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-section-header-overdue-section-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-section-header-overdue-section-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-overdue-section-header-overdue-section-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-today-section-header-today-section-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-today-section-header-today-section-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-today-section-header-today-section-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-today-section-header-today-section-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-this-week-section-header-this-week-section-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-this-week-section-header-this-week-section-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-this-week-section-header-this-week-section-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-this-week-section-header-this-week-section-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-next-week-section-header-next-week-section-text-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-next-week-section-header-next-week-section-text-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-next-week-section-header-next-week-section-text-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-next-week-section-header-next-week-section-text-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-task-title-1-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-task-title-1-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-task-title-1-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-task-title-1-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-due-date-1-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-due-date-1-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-due-date-1-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-1-sample-due-date-1-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-task-title-2-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-task-title-2-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-task-title-2-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-task-title-2-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-due-date-2-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-due-date-2-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-due-date-2-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-2-sample-due-date-2-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-task-title-3-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-task-title-3-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-task-title-3-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-task-title-3-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-due-date-3-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-due-date-3-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-due-date-3-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-3-sample-due-date-3-line-height: 14.522727012634277px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-task-title-4-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-task-title-4-size: 14px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-task-title-4-weight: 600;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-task-title-4-line-height: 16.94318199157715px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-due-date-4-family: Inter;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-due-date-4-size: 12px;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-due-date-4-weight: 400;
+  --font-document-handoff-ofir-ai-complete-design-system-sample-task-card-4-sample-due-date-4-line-height: 14.522727012634277px;
+  --font-document-handoff-1--login-screen-login-card-company-logo-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-company-logo-size: 32px;
+  --font-document-handoff-1--login-screen-login-card-company-logo-weight: 700;
+  --font-document-handoff-1--login-screen-login-card-company-logo-line-height: 38.727272033691406px;
+  --font-document-handoff-1--login-screen-login-card-login-title-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-login-title-size: 24px;
+  --font-document-handoff-1--login-screen-login-card-login-title-weight: 600;
+  --font-document-handoff-1--login-screen-login-card-login-title-line-height: 29.045454025268555px;
+  --font-document-handoff-1--login-screen-login-card-login-subtitle-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-login-subtitle-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-login-subtitle-weight: 400;
+  --font-document-handoff-1--login-screen-login-card-login-subtitle-line-height: 16.94318199157715px;
+  --font-document-handoff-1--login-screen-login-card-email-field-email-placeholder-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-email-field-email-placeholder-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-email-field-email-placeholder-weight: 400;
+  --font-document-handoff-1--login-screen-login-card-email-field-email-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-1--login-screen-login-card-password-field-password-placeholder-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-password-field-password-placeholder-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-password-field-password-placeholder-weight: 400;
+  --font-document-handoff-1--login-screen-login-card-password-field-password-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-1--login-screen-login-card-remember-text-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-remember-text-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-remember-text-weight: 400;
+  --font-document-handoff-1--login-screen-login-card-remember-text-line-height: 16.94318199157715px;
+  --font-document-handoff-1--login-screen-login-card-forgot-password-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-forgot-password-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-forgot-password-weight: 400;
+  --font-document-handoff-1--login-screen-login-card-forgot-password-line-height: 16.94318199157715px;
+  --font-document-handoff-1--login-screen-login-card-login-button-login-button-text-family: Inter;
+  --font-document-handoff-1--login-screen-login-card-login-button-login-button-text-size: 14px;
+  --font-document-handoff-1--login-screen-login-card-login-button-login-button-text-weight: 600;
+  --font-document-handoff-1--login-screen-login-card-login-button-login-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4--task-detail-view-task-detail-title-family: Inter;
+  --font-document-handoff-4--task-detail-view-task-detail-title-size: 32px;
+  --font-document-handoff-4--task-detail-view-task-detail-title-weight: 700;
+  --font-document-handoff-4--task-detail-view-task-detail-title-line-height: 38.727272033691406px;
+  --font-document-handoff-4--task-detail-view-back-button-back-button-text-family: Inter;
+  --font-document-handoff-4--task-detail-view-back-button-back-button-text-size: 14px;
+  --font-document-handoff-4--task-detail-view-back-button-back-button-text-weight: 600;
+  --font-document-handoff-4--task-detail-view-back-button-back-button-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-main-title-family: Inter;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-main-title-size: 20px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-main-title-weight: 600;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-main-title-line-height: 24.204544067382812px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-description-family: Inter;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-description-size: 14px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-description-weight: 400;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-description-line-height: 16.94318199157715px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-meta-family: Inter;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-meta-size: 12px;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-meta-weight: 600;
+  --font-document-handoff-4--task-detail-view-task-detail-main-card-task-detail-meta-line-height: 14.522727012634277px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-sidebar-logo-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-sidebar-logo-size: 18px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-sidebar-logo-weight: 700;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-sidebar-logo-line-height: 21.784090042114258px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-weight: 600;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-team-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-team-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-team-weight: 500;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-team-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-assign-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-assign-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-assign-weight: 500;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-assign-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-reports-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-reports-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-reports-weight: 500;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-reports-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-approvals-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-approvals-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-approvals-weight: 500;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-approvals-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-manager-initials-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-manager-initials-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-manager-initials-weight: 600;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar-manager-initials-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-name-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-name-size: 14px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-name-weight: 600;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-name-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-role-family: Inter;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-role-size: 12px;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-role-weight: 400;
+  --font-document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-role-line-height: 14.522727012634277px;
+  --font-document-handoff-3--manager-dashboard-team-handovers-title-family: Inter;
+  --font-document-handoff-3--manager-dashboard-team-handovers-title-size: 32px;
+  --font-document-handoff-3--manager-dashboard-team-handovers-title-weight: 700;
+  --font-document-handoff-3--manager-dashboard-team-handovers-title-line-height: 38.727272033691406px;
+  --font-document-handoff-3--manager-dashboard-test-like-yours-family: Inter;
+  --font-document-handoff-3--manager-dashboard-test-like-yours-size: 50px;
+  --font-document-handoff-3--manager-dashboard-test-like-yours-weight: 700;
+  --font-document-handoff-3--manager-dashboard-test-like-yours-line-height: 60.5113639831543px;
+  --font-document-handoff-3--manager-dashboard-department-filter-department-text-family: Inter;
+  --font-document-handoff-3--manager-dashboard-department-filter-department-text-size: 14px;
+  --font-document-handoff-3--manager-dashboard-department-filter-department-text-weight: 500;
+  --font-document-handoff-3--manager-dashboard-department-filter-department-text-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-role-filter-role-text-family: Inter;
+  --font-document-handoff-3--manager-dashboard-role-filter-role-text-size: 14px;
+  --font-document-handoff-3--manager-dashboard-role-filter-role-text-weight: 500;
+  --font-document-handoff-3--manager-dashboard-role-filter-role-text-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-year-filter-year-text-family: Inter;
+  --font-document-handoff-3--manager-dashboard-year-filter-year-text-size: 14px;
+  --font-document-handoff-3--manager-dashboard-year-filter-year-text-weight: 500;
+  --font-document-handoff-3--manager-dashboard-year-filter-year-text-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-month-filter-month-text-family: Inter;
+  --font-document-handoff-3--manager-dashboard-month-filter-month-text-size: 14px;
+  --font-document-handoff-3--manager-dashboard-month-filter-month-text-weight: 500;
+  --font-document-handoff-3--manager-dashboard-month-filter-month-text-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-search-box-search-placeholder-family: Inter;
+  --font-document-handoff-3--manager-dashboard-search-box-search-placeholder-size: 14px;
+  --font-document-handoff-3--manager-dashboard-search-box-search-placeholder-weight: 400;
+  --font-document-handoff-3--manager-dashboard-search-box-search-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-hide-completed-checkbox-hide-completed-text-family: Inter;
+  --font-document-handoff-3--manager-dashboard-hide-completed-checkbox-hide-completed-text-size: 14px;
+  --font-document-handoff-3--manager-dashboard-hide-completed-checkbox-hide-completed-text-weight: 400;
+  --font-document-handoff-3--manager-dashboard-hide-completed-checkbox-hide-completed-text-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-overdue-category-family: Inter;
+  --font-document-handoff-3--manager-dashboard-overdue-category-size: 16px;
+  --font-document-handoff-3--manager-dashboard-overdue-category-weight: 600;
+  --font-document-handoff-3--manager-dashboard-overdue-category-line-height: 19.363636016845703px;
+  --font-document-handoff-3--manager-dashboard-today-category-family: Inter;
+  --font-document-handoff-3--manager-dashboard-today-category-size: 16px;
+  --font-document-handoff-3--manager-dashboard-today-category-weight: 600;
+  --font-document-handoff-3--manager-dashboard-today-category-line-height: 19.363636016845703px;
+  --font-document-handoff-3--manager-dashboard-position-today-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-today-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-today-2-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-today-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-today-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-today-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-today-2-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-today-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-today-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-today-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-today-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-today-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-today-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-today-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-position-today-3-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-today-3-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-today-3-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-today-3-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-3-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-3-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-3-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-3-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-today-3-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-today-3-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-today-3-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-today-3-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-today-3-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-today-3-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-today-3-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-today-3-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-3-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-today-3-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-3-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-today-3-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-this-week-category-family: Inter;
+  --font-document-handoff-3--manager-dashboard-this-week-category-size: 16px;
+  --font-document-handoff-3--manager-dashboard-this-week-category-weight: 600;
+  --font-document-handoff-3--manager-dashboard-this-week-category-line-height: 19.363636016845703px;
+  --font-document-handoff-3--manager-dashboard-next-week-category-family: Inter;
+  --font-document-handoff-3--manager-dashboard-next-week-category-size: 16px;
+  --font-document-handoff-3--manager-dashboard-next-week-category-weight: 600;
+  --font-document-handoff-3--manager-dashboard-next-week-category-line-height: 19.363636016845703px;
+  --font-document-handoff-3--manager-dashboard-position-next-1-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-next-1-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-next-1-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-next-1-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-1-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-1-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-1-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-1-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-next-1-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-next-1-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-next-1-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-next-1-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-next-1-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-next-1-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-next-1-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-next-1-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-next-1-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-next-1-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-next-1-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-next-1-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-position-next-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-next-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-next-2-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-next-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-next-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-next-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-next-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-next-2-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-next-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-next-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-next-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-next-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-next-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-next-2-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-next-2-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-next-2-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-next-2-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-position-overdue-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-overdue-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-overdue-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-overdue-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-overdue-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-overdue-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-overdue-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-overdue-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-overdue-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-overdue-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-overdue-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-overdue-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-overdue-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-overdue-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-overdue-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-overdue-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-overdue-correct-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-overdue-correct-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-overdue-correct-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-overdue-correct-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-position-today-4-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-today-4-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-today-4-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-today-4-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-4-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-4-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-4-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-4-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-today-4-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-today-4-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-today-4-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-today-4-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-today-4-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-today-4-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-today-4-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-today-4-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-4-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-today-4-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-4-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-today-4-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-position-today-5-family: Inter;
+  --font-document-handoff-3--manager-dashboard-position-today-5-size: 14px;
+  --font-document-handoff-3--manager-dashboard-position-today-5-weight: 500;
+  --font-document-handoff-3--manager-dashboard-position-today-5-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-5-family: Inter;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-5-size: 14px;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-5-weight: 400;
+  --font-document-handoff-3--manager-dashboard-handover-team-today-5-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-progress-today-5-family: Inter;
+  --font-document-handoff-3--manager-dashboard-progress-today-5-size: 14px;
+  --font-document-handoff-3--manager-dashboard-progress-today-5-weight: 500;
+  --font-document-handoff-3--manager-dashboard-progress-today-5-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-date-today-5-family: Inter;
+  --font-document-handoff-3--manager-dashboard-date-today-5-size: 14px;
+  --font-document-handoff-3--manager-dashboard-date-today-5-weight: 400;
+  --font-document-handoff-3--manager-dashboard-date-today-5-line-height: 16.94318199157715px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-5-family: Inter;
+  --font-document-handoff-3--manager-dashboard-status-text-today-5-size: 14px;
+  --font-document-handoff-3--manager-dashboard-status-text-today-5-weight: 400;
+  --font-document-handoff-3--manager-dashboard-status-text-today-5-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-sidebar-logo-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-sidebar-logo-size: 18px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-sidebar-logo-weight: 700;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-sidebar-logo-line-height: 21.784090042114258px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-weight: 600;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active-manager-nav-text-dashboard-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-team-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-team-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-team-weight: 500;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-team-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-assign-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-assign-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-assign-weight: 500;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-assign-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-reports-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-reports-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-reports-weight: 500;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-reports-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-approvals-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-approvals-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-approvals-weight: 500;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-approvals-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-manager-initials-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-manager-initials-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-manager-initials-weight: 600;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar-manager-initials-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-name-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-name-size: 14px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-name-weight: 600;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-name-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-role-family: Inter;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-role-size: 12px;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-role-weight: 400;
+  --font-document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-role-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-team-handovers-title-family: Inter;
+  --font-document-handoff-4-my-handsover-team-handovers-title-size: 32px;
+  --font-document-handoff-4-my-handsover-team-handovers-title-weight: 700;
+  --font-document-handoff-4-my-handsover-team-handovers-title-line-height: 38.727272033691406px;
+  --font-document-handoff-4-my-handsover-test-like-yours-family: Inter;
+  --font-document-handoff-4-my-handsover-test-like-yours-size: 50px;
+  --font-document-handoff-4-my-handsover-test-like-yours-weight: 700;
+  --font-document-handoff-4-my-handsover-test-like-yours-line-height: 60.5113639831543px;
+  --font-document-handoff-4-my-handsover-department-filter-department-text-family: Inter;
+  --font-document-handoff-4-my-handsover-department-filter-department-text-size: 14px;
+  --font-document-handoff-4-my-handsover-department-filter-department-text-weight: 500;
+  --font-document-handoff-4-my-handsover-department-filter-department-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-role-filter-role-text-family: Inter;
+  --font-document-handoff-4-my-handsover-role-filter-role-text-size: 14px;
+  --font-document-handoff-4-my-handsover-role-filter-role-text-weight: 500;
+  --font-document-handoff-4-my-handsover-role-filter-role-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-year-filter-year-text-family: Inter;
+  --font-document-handoff-4-my-handsover-year-filter-year-text-size: 14px;
+  --font-document-handoff-4-my-handsover-year-filter-year-text-weight: 500;
+  --font-document-handoff-4-my-handsover-year-filter-year-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-month-filter-month-text-family: Inter;
+  --font-document-handoff-4-my-handsover-month-filter-month-text-size: 14px;
+  --font-document-handoff-4-my-handsover-month-filter-month-text-weight: 500;
+  --font-document-handoff-4-my-handsover-month-filter-month-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-search-box-search-placeholder-family: Inter;
+  --font-document-handoff-4-my-handsover-search-box-search-placeholder-size: 14px;
+  --font-document-handoff-4-my-handsover-search-box-search-placeholder-weight: 400;
+  --font-document-handoff-4-my-handsover-search-box-search-placeholder-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-hide-completed-checkbox-hide-completed-text-family: Inter;
+  --font-document-handoff-4-my-handsover-hide-completed-checkbox-hide-completed-text-size: 14px;
+  --font-document-handoff-4-my-handsover-hide-completed-checkbox-hide-completed-text-weight: 400;
+  --font-document-handoff-4-my-handsover-hide-completed-checkbox-hide-completed-text-line-height: 16.94318199157715px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-title-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-title-size: 15px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-title-weight: 600;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-description-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-description-size: 13px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-description-weight: 400;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-date-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-date-size: 12px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-date-weight: 400;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-overdue-card-1-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-high-tag-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-high-tag-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-high-tag-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1-high-tag-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-security-tag-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-security-tag-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-security-tag-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1-security-tag-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-title-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-title-size: 15px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-title-weight: 600;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-description-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-description-size: 13px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-description-weight: 400;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-date-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-date-size: 12px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-date-weight: 400;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-overdue-card-2-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-high-tag-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-high-tag-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-high-tag-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2-high-tag-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-sales-tag-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-sales-tag-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-sales-tag-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2-sales-tag-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-header-overdue-header-text-family: Inter;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-header-overdue-header-text-size: 16px;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-header-overdue-header-text-weight: 600;
+  --font-document-handoff-4-my-handsover-overdue-column-overdue-header-overdue-header-text-line-height: 19.363636016845703px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-header-todo-header-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-header-todo-header-text-size: 16px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-header-todo-header-text-weight: 600;
+  --font-document-handoff-4-my-handsover-todo-column-todo-header-todo-header-text-line-height: 19.363636016845703px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-title-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-title-size: 15px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-title-weight: 600;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-description-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-description-size: 13px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-description-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-date-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-date-size: 12px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-date-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-todo-card-1-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-medium-tag-todo-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-medium-tag-todo-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-medium-tag-todo-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1-medium-tag-todo-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-systems-tag-todo-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-systems-tag-todo-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-systems-tag-todo-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1-systems-tag-todo-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-title-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-title-size: 15px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-title-weight: 600;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-description-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-description-size: 13px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-description-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-date-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-date-size: 12px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-date-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-todo-card-2-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-medium-tag-todo-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-medium-tag-todo-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-medium-tag-todo-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2-medium-tag-todo-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-training-tag-todo-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-training-tag-todo-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-training-tag-todo-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2-training-tag-todo-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-title-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-title-size: 15px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-title-weight: 600;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-description-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-description-size: 13px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-description-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-date-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-date-size: 12px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-date-weight: 400;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-todo-card-3-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-low-tag-todo-3-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-low-tag-todo-3-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-low-tag-todo-3-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3-low-tag-todo-3-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-documentation-tag-todo-3-text-family: Inter;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-documentation-tag-todo-3-text-size: 11px;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-documentation-tag-todo-3-text-weight: 500;
+  --font-document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3-documentation-tag-todo-3-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-header-progress-header-text-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-header-progress-header-text-size: 16px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-header-progress-header-text-weight: 600;
+  --font-document-handoff-4-my-handsover-progress-column-progress-header-progress-header-text-line-height: 19.363636016845703px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-title-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-title-size: 15px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-title-weight: 600;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-description-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-description-size: 13px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-description-weight: 400;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-date-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-date-size: 12px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-date-weight: 400;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-progress-card-1-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-high-tag-progress-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-high-tag-progress-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-high-tag-progress-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1-high-tag-progress-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-training-tag-progress-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-training-tag-progress-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-training-tag-progress-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1-training-tag-progress-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-title-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-title-size: 15px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-title-weight: 600;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-description-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-description-size: 13px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-description-weight: 400;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-date-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-date-size: 12px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-date-weight: 400;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-progress-card-2-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-medium-tag-progress-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-medium-tag-progress-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-medium-tag-progress-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2-medium-tag-progress-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-review-tag-progress-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-review-tag-progress-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-review-tag-progress-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2-review-tag-progress-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-header-completed-header-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-header-completed-header-text-size: 16px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-header-completed-header-text-weight: 600;
+  --font-document-handoff-4-my-handsover-completed-column-completed-header-completed-header-text-line-height: 19.363636016845703px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-title-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-title-size: 15px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-title-weight: 600;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-description-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-description-size: 13px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-description-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-date-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-date-size: 12px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-date-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-completed-card-1-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-low-tag-completed-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-low-tag-completed-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-low-tag-completed-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1-low-tag-completed-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-admin-tag-completed-1-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-admin-tag-completed-1-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-admin-tag-completed-1-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1-admin-tag-completed-1-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-title-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-title-size: 15px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-title-weight: 600;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-description-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-description-size: 13px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-description-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-date-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-date-size: 12px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-date-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-completed-card-2-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-high-tag-completed-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-high-tag-completed-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-high-tag-completed-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2-high-tag-completed-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-legal-tag-completed-2-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-legal-tag-completed-2-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-legal-tag-completed-2-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2-legal-tag-completed-2-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-title-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-title-size: 15px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-title-weight: 600;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-description-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-description-size: 13px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-description-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-date-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-date-size: 12px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-date-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-completed-card-3-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-medium-tag-completed-3-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-medium-tag-completed-3-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-medium-tag-completed-3-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3-medium-tag-completed-3-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-social-tag-completed-3-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-social-tag-completed-3-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-social-tag-completed-3-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3-social-tag-completed-3-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-title-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-title-size: 15px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-title-weight: 600;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-title-line-height: 18.15340805053711px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-description-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-description-size: 13px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-description-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-description-line-height: 15.732954025268555px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-date-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-date-size: 12px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-date-weight: 400;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-completed-card-4-date-line-height: 14.522727012634277px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-medium-tag-completed-4-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-medium-tag-completed-4-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-medium-tag-completed-4-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4-medium-tag-completed-4-text-line-height: 13.3125px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-it-tag-completed-4-text-family: Inter;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-it-tag-completed-4-text-size: 11px;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-it-tag-completed-4-text-weight: 500;
+  --font-document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4-it-tag-completed-4-text-line-height: 13.3125px;
+
+  /* Spacing */
+  --spacing-document-handoff-ofir-ai-design-system-color-palette-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-color-palette-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-color-palette-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-color-palette-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-color-palette-gap: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-gap: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-primary-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-primary-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-primary-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-primary-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-secondary-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-secondary-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-secondary-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-secondary-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-success-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-success-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-success-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-success-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-warning-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-warning-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-warning-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-warning-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-danger-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-danger-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-danger-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-danger-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-ghost-button-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-ghost-button-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-ghost-button-paddingTop: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-button-styles-ghost-button-paddingBottom: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-paddingLeft: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-paddingRight: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-paddingTop: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-paddingBottom: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-gap: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-gap: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-paddingLeft: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-paddingRight: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-paddingTop: 4px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge-paddingBottom: 4px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-gap: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-paddingLeft: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-paddingRight: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-paddingTop: 4px;
+  --spacing-document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge-paddingBottom: 4px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-paddingLeft: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-paddingRight: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-paddingTop: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-paddingBottom: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-gap: 40px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-logo-section-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-logo-section-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-logo-section-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-logo-section-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-logo-section-gap: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-search-box-paddingLeft: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-search-box-paddingRight: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-search-box-paddingTop: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-search-box-paddingBottom: 8px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-search-box-gap: 12px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-user-menu-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-user-menu-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-user-menu-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-user-menu-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-navigation-header-user-menu-gap: 16px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-paddingLeft: 32px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-paddingRight: 32px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-paddingTop: 32px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-paddingBottom: 32px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-gap: 32px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-paddingLeft: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-paddingRight: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-paddingTop: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-paddingBottom: 10px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-gap: 24px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-paddingLeft: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-paddingRight: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-paddingTop: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-paddingBottom: 20px;
+  --spacing-document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card-gap: 8px;
+  --spacing-document-handoff-3--manager-dashboard-department-filter-paddingLeft: 12px;
+  --spacing-document-handoff-3--manager-dashboard-department-filter-paddingRight: 12px;
+  --spacing-document-handoff-3--manager-dashboard-department-filter-paddingTop: 8px;
+  --spacing-document-handoff-3--manager-dashboard-department-filter-paddingBottom: 8px;
+  --spacing-document-handoff-3--manager-dashboard-role-filter-paddingLeft: 12px;
+  --spacing-document-handoff-3--manager-dashboard-role-filter-paddingRight: 12px;
+  --spacing-document-handoff-3--manager-dashboard-role-filter-paddingTop: 8px;
+  --spacing-document-handoff-3--manager-dashboard-role-filter-paddingBottom: 8px;
+  --spacing-document-handoff-3--manager-dashboard-year-filter-paddingLeft: 12px;
+  --spacing-document-handoff-3--manager-dashboard-year-filter-paddingRight: 12px;
+  --spacing-document-handoff-3--manager-dashboard-year-filter-paddingTop: 8px;
+  --spacing-document-handoff-3--manager-dashboard-year-filter-paddingBottom: 8px;
+  --spacing-document-handoff-3--manager-dashboard-month-filter-paddingLeft: 12px;
+  --spacing-document-handoff-3--manager-dashboard-month-filter-paddingRight: 12px;
+  --spacing-document-handoff-3--manager-dashboard-month-filter-paddingTop: 8px;
+  --spacing-document-handoff-3--manager-dashboard-month-filter-paddingBottom: 8px;
+  --spacing-document-handoff-3--manager-dashboard-search-box-paddingLeft: 12px;
+  --spacing-document-handoff-3--manager-dashboard-search-box-paddingRight: 12px;
+  --spacing-document-handoff-3--manager-dashboard-search-box-paddingTop: 10px;
+  --spacing-document-handoff-3--manager-dashboard-search-box-paddingBottom: 10px;
+  --spacing-document-handoff-3--manager-dashboard-hide-completed-checkbox-paddingTop: 10px;
+  --spacing-document-handoff-3--manager-dashboard-hide-completed-checkbox-paddingBottom: 10px;
+  --spacing-document-handoff-4-my-handsover-department-filter-paddingLeft: 12px;
+  --spacing-document-handoff-4-my-handsover-department-filter-paddingRight: 12px;
+  --spacing-document-handoff-4-my-handsover-department-filter-paddingTop: 8px;
+  --spacing-document-handoff-4-my-handsover-department-filter-paddingBottom: 8px;
+  --spacing-document-handoff-4-my-handsover-role-filter-paddingLeft: 12px;
+  --spacing-document-handoff-4-my-handsover-role-filter-paddingRight: 12px;
+  --spacing-document-handoff-4-my-handsover-role-filter-paddingTop: 8px;
+  --spacing-document-handoff-4-my-handsover-role-filter-paddingBottom: 8px;
+  --spacing-document-handoff-4-my-handsover-year-filter-paddingLeft: 12px;
+  --spacing-document-handoff-4-my-handsover-year-filter-paddingRight: 12px;
+  --spacing-document-handoff-4-my-handsover-year-filter-paddingTop: 8px;
+  --spacing-document-handoff-4-my-handsover-year-filter-paddingBottom: 8px;
+  --spacing-document-handoff-4-my-handsover-month-filter-paddingLeft: 12px;
+  --spacing-document-handoff-4-my-handsover-month-filter-paddingRight: 12px;
+  --spacing-document-handoff-4-my-handsover-month-filter-paddingTop: 8px;
+  --spacing-document-handoff-4-my-handsover-month-filter-paddingBottom: 8px;
+  --spacing-document-handoff-4-my-handsover-search-box-paddingLeft: 12px;
+  --spacing-document-handoff-4-my-handsover-search-box-paddingRight: 12px;
+  --spacing-document-handoff-4-my-handsover-search-box-paddingTop: 10px;
+  --spacing-document-handoff-4-my-handsover-search-box-paddingBottom: 10px;
+  --spacing-document-handoff-4-my-handsover-hide-completed-checkbox-paddingTop: 10px;
+  --spacing-document-handoff-4-my-handsover-hide-completed-checkbox-paddingBottom: 10px;
+}
+
+/* Component Classes */
+.document-handoff-ofir-ai-design-system {
+  width: 1920px;
+  height: 2400px;
+}
+
+.document-handoff-ofir-ai-design-system-color-palette {
+  width: 800px;
+  height: 200px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles {
+  width: 800px;
+  height: 300px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-primary-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-secondary-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-success-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-warning-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-danger-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-button-styles-ghost-button {
+  width: 160px;
+  height: 48px;
+}
+
+.document-handoff-ofir-ai-design-system-task-card-component {
+  width: 320px;
+  height: 180px;
+}
+
+.document-handoff-ofir-ai-design-system-task-card-component-card-header {
+  width: 280px;
+  height: 24px;
+}
+
+.document-handoff-ofir-ai-design-system-task-card-component-card-header-status-badge {
+  width: 80px;
+  height: 24px;
+}
+
+.document-handoff-ofir-ai-design-system-task-card-component-card-footer {
+  width: 280px;
+  height: 32px;
+}
+
+.document-handoff-ofir-ai-design-system-task-card-component-card-footer-priority-badge {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-ofir-ai-design-system-navigation-header {
+  width: 1200px;
+  height: 64px;
+}
+
+.document-handoff-ofir-ai-design-system-navigation-header-logo-section {
+  width: 200px;
+  height: 32px;
+}
+
+.document-handoff-ofir-ai-design-system-navigation-header-search-box {
+  width: 400px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-design-system-navigation-header-user-menu {
+  width: 120px;
+  height: 32px;
+}
+
+.document-handoff-ofir-ai-design-system-dashboard-layout {
+  width: 1200px;
+  height: 800px;
+}
+
+.document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards {
+  width: 1136px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-design-system-dashboard-layout-kpi-cards-total-tasks-card {
+  width: 272px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system {
+  width: 1920px;
+  height: 2400px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-primary-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-secondary-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-success-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-warning-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-danger-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-ghost-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-task-card {
+  width: 360px;
+  height: 180px;
+}
+
+.document-handoff-ofir-ai-job-handoff---complete-system-task-card-status-badge {
+  width: 80px;
+  height: 24px;
+}
+
+.document-handoff-ofir-ai-complete-design-system {
+  width: 1920px;
+  height: 2400px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-primary-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-secondary-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-success-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-warning-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-danger-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-ghost-button {
+  width: 120px;
+  height: 44px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-task-card {
+  width: 360px;
+  height: 180px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-task-card-status-badge {
+  width: 80px;
+  height: 24px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-navigation-header {
+  width: 1200px;
+  height: 72px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-navigation-header-search-bar {
+  width: 300px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-navigation-header-user-menu {
+  width: 40px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-active-tasks-kpi {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-completed-today-kpi {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-overdue-kpi {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-team-members-kpi {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-overdue-section-header {
+  width: 280px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-today-section-header {
+  width: 280px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-this-week-section-header {
+  width: 280px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-next-week-section-header {
+  width: 280px;
+  height: 40px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-sample-task-card-1 {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-sample-task-card-2 {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-sample-task-card-3 {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-ofir-ai-complete-design-system-sample-task-card-4 {
+  width: 280px;
+  height: 120px;
+}
+
+.document-handoff-1--login-screen {
+  width: 1440px;
+  height: 900px;
+}
+
+.document-handoff-1--login-screen-login-card {
+  width: 400px;
+  height: 500px;
+}
+
+.document-handoff-1--login-screen-login-card-email-field {
+  width: 300px;
+  height: 44px;
+}
+
+.document-handoff-1--login-screen-login-card-password-field {
+  width: 300px;
+  height: 44px;
+}
+
+.document-handoff-1--login-screen-login-card-login-button {
+  width: 300px;
+  height: 44px;
+}
+
+.document-handoff-4--task-detail-view {
+  width: 1440px;
+  height: 900px;
+}
+
+.document-handoff-4--task-detail-view-back-button {
+  width: 100px;
+  height: 40px;
+}
+
+.document-handoff-4--task-detail-view-task-detail-main-card {
+  width: 800px;
+  height: 200px;
+}
+
+.document-handoff-3--manager-dashboard {
+  width: 1440px;
+  height: 900px;
+}
+
+.document-handoff-3--manager-dashboard-manager-sidebar {
+  width: 236px;
+  height: 900px;
+}
+
+.document-handoff-3--manager-dashboard-manager-sidebar-manager-nav-item-active {
+  width: 240px;
+  height: 40px;
+}
+
+.document-handoff-3--manager-dashboard-manager-sidebar-manager-profile {
+  width: 240px;
+  height: 60px;
+}
+
+.document-handoff-3--manager-dashboard-manager-sidebar-manager-profile-manager-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.document-handoff-3--manager-dashboard-department-filter {
+  width: 190px;
+  height: 38px;
+}
+
+.document-handoff-3--manager-dashboard-role-filter {
+  width: 190px;
+  height: 38px;
+}
+
+.document-handoff-3--manager-dashboard-year-filter {
+  width: 127px;
+  height: 38px;
+}
+
+.document-handoff-3--manager-dashboard-month-filter {
+  width: 140px;
+  height: 38px;
+}
+
+.document-handoff-3--manager-dashboard-search-box {
+  width: 300px;
+  height: 38px;
+}
+
+.document-handoff-3--manager-dashboard-hide-completed-checkbox {
+  width: 210px;
+  height: 40px;
+}
+
+.document-handoff-3--manager-dashboard-today-row-2-background {
+  width: 1148px;
+  height: 53px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-today-2 {
+  width: 264px;
+  height: 35px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-today-3 {
+  width: 264px;
+  height: 35px;
+}
+
+.document-handoff-3--manager-dashboard-next-row-1-background {
+  width: 1148px;
+  height: 54px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-next-1 {
+  width: 264px;
+  height: 36px;
+}
+
+.document-handoff-3--manager-dashboard-next-row-2-background {
+  width: 1148px;
+  height: 54px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-next-2 {
+  width: 264px;
+  height: 35px;
+}
+
+.document-handoff-3--manager-dashboard-overdue-row-background {
+  width: 1148px;
+  height: 54px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-overdue {
+  width: 264px;
+  height: 36px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-today-4 {
+  width: 264px;
+  height: 35px;
+}
+
+.document-handoff-3--manager-dashboard-status-badge-today-5 {
+  width: 264px;
+  height: 35px;
+}
+
+.document-handoff-simple-test-page {
+  width: 600px;
+  height: 400px;
+}
+
+.document-handoff-2--employee-dashboard {
+  width: 1440px;
+  height: 1100px;
+}
+
+.document-handoff-4-my-handsover {
+  width: 1440px;
+  height: 900px;
+}
+
+.document-handoff-4-my-handsover-manager-sidebar {
+  width: 236px;
+  height: 900px;
+}
+
+.document-handoff-4-my-handsover-manager-sidebar-manager-nav-item-active {
+  width: 240px;
+  height: 40px;
+}
+
+.document-handoff-4-my-handsover-manager-sidebar-manager-profile {
+  width: 240px;
+  height: 60px;
+}
+
+.document-handoff-4-my-handsover-manager-sidebar-manager-profile-manager-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.document-handoff-4-my-handsover-department-filter {
+  width: 190px;
+  height: 38px;
+}
+
+.document-handoff-4-my-handsover-role-filter {
+  width: 190px;
+  height: 38px;
+}
+
+.document-handoff-4-my-handsover-year-filter {
+  width: 127px;
+  height: 38px;
+}
+
+.document-handoff-4-my-handsover-month-filter {
+  width: 140px;
+  height: 38px;
+}
+
+.document-handoff-4-my-handsover-search-box {
+  width: 300px;
+  height: 38px;
+}
+
+.document-handoff-4-my-handsover-hide-completed-checkbox {
+  width: 210px;
+  height: 40px;
+}
+
+.document-handoff-4-my-handsover-overdue-column {
+  width: 280px;
+  height: 700px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-1 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-1-high-tag-1 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-1-security-tag-1 {
+  width: 70px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-2 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-2-high-tag-2 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-card-2-sales-tag-2 {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-overdue-column-overdue-header {
+  width: 280px;
+  height: 50px;
+}
+
+.document-handoff-4-my-handsover-todo-column {
+  width: 280px;
+  height: 700px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-header {
+  width: 280px;
+  height: 50px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-1 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-1-medium-tag-todo-1 {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-1-systems-tag-todo-1 {
+  width: 70px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-2 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-2-medium-tag-todo-2 {
+  width: 65px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-2-training-tag-todo-2 {
+  width: 70px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-3 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-3-low-tag-todo-3 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-todo-column-todo-card-3-documentation-tag-todo-3 {
+  width: 105px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-progress-column {
+  width: 280px;
+  height: 700px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-header {
+  width: 280px;
+  height: 50px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-1 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-1-high-tag-progress-1 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-1-training-tag-progress-1 {
+  width: 70px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-2 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-2-medium-tag-progress-2 {
+  width: 65px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-progress-column-progress-card-2-review-tag-progress-2 {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column {
+  width: 280px;
+  height: 700px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-header {
+  width: 280px;
+  height: 50px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-1 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-1-low-tag-completed-1 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-1-admin-tag-completed-1 {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-2 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-2-high-tag-completed-2 {
+  width: 50px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-2-legal-tag-completed-2 {
+  width: 55px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-3 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-3-medium-tag-completed-3 {
+  width: 65px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-3-social-tag-completed-3 {
+  width: 60px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-4 {
+  width: 260px;
+  height: 120px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-4-medium-tag-completed-4 {
+  width: 65px;
+  height: 24px;
+}
+
+.document-handoff-4-my-handsover-completed-column-completed-card-4-it-tag-completed-4 {
+  width: 40px;
+  height: 24px;
+}
+
